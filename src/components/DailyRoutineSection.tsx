@@ -1,5 +1,5 @@
 
-import { Sun, Coffee, UtensilsCrossed, Activity, Gamepad2, Moon, Heart } from "lucide-react";
+import { Sun, Coffee, UtensilsCrossed, Activity, Gamepad2, Moon, Heart, Users } from "lucide-react";
 
 export const DailyRoutineSection = () => {
   const routineItems = [
@@ -67,10 +67,9 @@ export const DailyRoutineSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Rotina Diária</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nossa Rotina Diária</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Uma rotina estruturada e carinhosa que promove bem-estar, saúde e felicidade 
-              em cada momento do dia, respeitando as necessidades individuais de cada residente.
+              Atividades pensadas para promover saúde, conforto e alegria a cada momento do dia.
             </p>
           </div>
 
@@ -88,8 +87,8 @@ export const DailyRoutineSection = () => {
                   }`}
                 >
                   {/* Time Circle */}
-                  <div className="absolute left-8 md:left-1/2 w-16 h-16 rounded-full bg-white border-4 border-blue-200 flex items-center justify-center transform md:-translate-x-8 z-10">
-                    <span className="text-sm font-bold text-blue-600">{item.time}</span>
+                  <div className="absolute left-8 md:left-1/2 w-16 h-16 rounded-full bg-white border-4 border-[#FFB5A7] flex items-center justify-center transform md:-translate-x-8 z-10">
+                    <span className="text-sm font-bold text-[#FFB5A7]">{item.time}</span>
                   </div>
 
                   {/* Content Card */}
@@ -119,25 +118,25 @@ export const DailyRoutineSection = () => {
 
           {/* Additional Info */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-blue-50 p-6 rounded-lg text-center">
-              <h4 className="text-lg font-semibold text-blue-800 mb-3">Flexibilidade</h4>
-              <p className="text-blue-700">
-                Nossa rotina é adaptável às necessidades individuais, respeitando o ritmo e preferências de cada residente.
-              </p>
+            <div className="bg-gradient-to-br from-[#FFB5A7] to-[#FF9F8F] p-6 rounded-full text-center text-white hover:scale-105 transition-transform cursor-pointer" onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}>
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Heart className="w-8 h-8" />
+              </div>
+              <h4 className="text-lg font-semibold mb-2">Flexibilidade</h4>
             </div>
             
-            <div className="bg-green-50 p-6 rounded-lg text-center">
-              <h4 className="text-lg font-semibold text-green-800 mb-3">Acompanhamento</h4>
-              <p className="text-green-700">
-                Profissionais qualificados acompanham todas as atividades, garantindo segurança e bem-estar.
-              </p>
+            <div className="bg-gradient-to-br from-[#A8E6CF] to-[#96D7B8] p-6 rounded-full text-center text-white hover:scale-105 transition-transform cursor-pointer" onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}>
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Users className="w-8 h-8" />
+              </div>
+              <h4 className="text-lg font-semibold mb-2">Suporte</h4>
             </div>
             
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <h4 className="text-lg font-semibold text-purple-800 mb-3">Personalização</h4>
-              <p className="text-purple-700">
-                Cada plano de cuidados é personalizado considerando condições de saúde e preferências pessoais.
-              </p>
+            <div className="bg-gradient-to-br from-[#DDA0DD] to-[#D8BFD8] p-6 rounded-full text-center text-white hover:scale-105 transition-transform cursor-pointer" onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}>
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Activity className="w-8 h-8" />
+              </div>
+              <h4 className="text-lg font-semibold mb-2">Personalização</h4>
             </div>
           </div>
         </div>

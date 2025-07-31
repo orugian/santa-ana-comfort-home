@@ -2,54 +2,70 @@
 import { Heart, Stethoscope, UtensilsCrossed, Brain, Dumbbell, Users, Shirt, Cross } from "lucide-react";
 
 export const ServicesSection = () => {
-  const services = [
+  const serviceCategories = [
     {
-      icon: Stethoscope,
-      title: "Cuidados Médicos Profissionais",
-      description: "Acompanhamento médico contínuo com profissionais especializados em geriatria e suporte psiquiátrico quando necessário.",
-      color: "blue"
+      category: "Médico & Terapia",
+      color: "from-[#FFB5A7] to-[#FF9F8F]",
+      services: [
+        {
+          icon: Stethoscope,
+          title: "Cuidados Médicos",
+          description: "Acompanhamento médico contínuo com especialistas em geriatria"
+        },
+        {
+          icon: Brain,
+          title: "Gerontologia",
+          description: "Equipe especializada em cuidado integral de idosos"
+        }
+      ]
     },
     {
-      icon: Brain,
-      title: "Especialistas em Gerontologia",
-      description: "Equipe de gerontólogos experientes dedicados ao cuidado integral e personalizado de cada residente.",
-      color: "purple"
+      category: "Nutrição & Bem-estar",
+      color: "from-[#A8E6CF] to-[#96D7B8]",
+      services: [
+        {
+          icon: UtensilsCrossed,
+          title: "Nutrição Especializada",
+          description: "Planos alimentares supervisionados por nutricionistas"
+        },
+        {
+          icon: Heart,
+          title: "Apoio Psicológico",
+          description: "Suporte emocional contínuo para bem-estar mental"
+        }
+      ]
     },
     {
-      icon: UtensilsCrossed,
-      title: "Nutrição Especializada",
-      description: "Planos alimentares supervisionados por nutricionistas, adaptados às necessidades individuais de cada idoso.",
-      color: "green"
+      category: "Lazer & Cultura",
+      color: "from-[#DDA0DD] to-[#D8BFD8]",
+      services: [
+        {
+          icon: Dumbbell,
+          title: "Atividade Física",
+          description: "Exercícios adaptados promovendo mobilidade e força"
+        },
+        {
+          icon: Brain,
+          title: "Estimulação Cognitiva",
+          description: "Atividades para manter funções cognitivas ativas"
+        }
+      ]
     },
     {
-      icon: Heart,
-      title: "Apoio Psicológico",
-      description: "Acompanhamento psicológico e suporte emocional contínuo para promover bem-estar mental e qualidade de vida.",
-      color: "red"
-    },
-    {
-      icon: Dumbbell,
-      title: "Atividade Física Adaptada",
-      description: "Exercícios físicos especializados para a terceira idade, promovendo mobilidade, força e independência.",
-      color: "orange"
-    },
-    {
-      icon: Brain,
-      title: "Estimulação Cognitiva",
-      description: "Atividades e jogos desenvolvidos para manter e estimular as funções cognitivas e a memória.",
-      color: "indigo"
-    },
-    {
-      icon: Cross,
-      title: "Cuidado Espiritual",
-      description: "Grupos de oração e apoio espiritual respeitando as crenças e tradições de cada residente.",
-      color: "yellow"
-    },
-    {
-      icon: Shirt,
-      title: "Serviços de Apoio",
-      description: "Lavanderia, limpeza e manutenção das roupas e pertences pessoais com cuidado e atenção.",
-      color: "teal"
+      category: "Apoio Diário",
+      color: "from-[#F0E68C] to-[#DAA520]",
+      services: [
+        {
+          icon: Cross,
+          title: "Cuidado Espiritual",
+          description: "Apoio espiritual respeitando crenças individuais"
+        },
+        {
+          icon: Shirt,
+          title: "Serviços de Apoio",
+          description: "Lavanderia e cuidado com pertences pessoais"
+        }
+      ]
     }
   ];
 
@@ -73,31 +89,37 @@ export const ServicesSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nossos Serviços</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nosso Portfólio de Cuidados</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Oferecemos uma gama completa de serviços especializados para garantir o 
-              bem-estar físico, mental e emocional de nossos residentes.
+              Uma suíte completa para bem-estar físico, mental e social.
             </p>
           </div>
 
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div 
-                key={index}
-                className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 p-6 hover:-translate-y-1"
-              >
-                <div className={`w-16 h-16 rounded-lg ${getColorClasses(service.color)} flex items-center justify-center mb-4 transition-colors duration-300`}>
-                  <service.icon className="w-8 h-8" />
+            {serviceCategories.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="space-y-6">
+                <div className={`bg-gradient-to-r ${category.color} p-6 rounded-lg text-white text-center`}>
+                  <h3 className="text-xl font-bold mb-2">{category.category}</h3>
                 </div>
-                
-                <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {service.title}
-                </h3>
-                
-                <p className="text-gray-600 leading-relaxed">
-                  {service.description}
-                </p>
+                {category.services.map((service, serviceIndex) => (
+                  <div 
+                    key={serviceIndex}
+                    className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 p-6 hover:-translate-y-1 cursor-pointer"
+                  >
+                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110`}>
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors">
+                      {service.title}
+                    </h4>
+                    
+                    <p className="text-gray-600 leading-relaxed text-sm">
+                      {service.description}
+                    </p>
+                  </div>
+                ))}
               </div>
             ))}
           </div>
@@ -107,9 +129,7 @@ export const ServicesSection = () => {
             <div className="text-center">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Cuidado Personalizado</h3>
               <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Cada residente recebe um plano de cuidados personalizado, desenvolvido por nossa 
-                equipe multidisciplinar. Trabalhamos em estreita colaboração com as famílias para 
-                garantir que todas as necessidades específicas sejam atendidas com carinho e profissionalismo.
+                Cada residente recebe um plano de cuidados sob medida, co-criado com a família e nossa equipe multidisciplinar.
               </p>
             </div>
             

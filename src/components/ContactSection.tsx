@@ -43,11 +43,16 @@ export const ContactSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Entre em Contato</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Vamos Conversar!</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Estamos aqui para esclarecer suas dúvidas e agendar uma visita. 
-              Fale conosco e descubra como podemos cuidar do seu ente querido com todo carinho.
+              Agende uma visita ou tire suas dúvidas. Nossa equipe responderá com carinho.
             </p>
+            <div className="mt-8">
+              <button className="bg-gradient-to-r from-[#FFB5A7] to-[#A8E6CF] hover:from-[#FF9F8F] hover:to-[#96D7B8] text-gray-800 px-12 py-4 rounded-lg text-xl font-semibold w-full max-w-md">
+                <MessageCircle className="w-6 h-6 mr-3 inline" />
+                WhatsApp
+              </button>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

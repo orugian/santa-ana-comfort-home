@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Heart, Shield, Users } from "lucide-react";
+import { Heart, Stethoscope, Users, MessageCircle, Calendar } from "lucide-react";
 
 export const HeroSection = () => {
   const scrollToContact = () => {
@@ -15,36 +15,35 @@ export const HeroSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
-            Cuidado com{" "}
-            <span className="text-blue-600">Amor</span> e{" "}
-            <span className="text-green-600">Experiência</span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
+            <span className="text-[#F8B4C8]">Ternura</span> e{" "}
+            <span className="text-[#6B7280]">Excelência</span>{" "}
+            em Cada Detalhe
           </h1>
           
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-700 mb-8 animate-fade-in">
-            No Lar Santa Ana, oferecemos mais de 10 anos de dedicação ao cuidado de idosos,
-            proporcionando conforto, segurança e carinho em cada momento.
+            Há mais de 10 anos, oferecendo conforto, segurança e atenção personalizada aos nossos residentes.
           </p>
 
           {/* Core Values */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 animate-fade-in">
             <div className="flex flex-col items-center p-6 bg-white/80 rounded-lg shadow-sm">
-              <Heart className="w-12 h-12 text-red-500 mb-3" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Compassão</h3>
-              <p className="text-gray-600 text-center">Cuidado personalizado com amor e atenção a cada residente</p>
+              <Heart className="w-12 h-12 text-[#FFB5A7] mb-3" />
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Atenção Personalizada</h3>
+              <p className="text-gray-600 text-center">Cuidado individualizado com foco nas necessidades específicas de cada residente</p>
             </div>
             
             <div className="flex flex-col items-center p-6 bg-white/80 rounded-lg shadow-sm">
-              <Shield className="w-12 h-12 text-blue-500 mb-3" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Confiança</h3>
-              <p className="text-gray-600 text-center">Mais de uma década de experiência em cuidados geriátricos</p>
+              <Stethoscope className="w-12 h-12 text-[#A8E6CF] mb-3" />
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Expertise Geriátrica</h3>
+              <p className="text-gray-600 text-center">Equipe especializada em gerontologia com mais de uma década de experiência</p>
             </div>
             
             <div className="flex flex-col items-center p-6 bg-white/80 rounded-lg shadow-sm">
-              <Users className="w-12 h-12 text-green-500 mb-3" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Família</h3>
-              <p className="text-gray-600 text-center">Um ambiente acolhedor onde todos se sentem em casa</p>
+              <Users className="w-12 h-12 text-[#DDA0DD] mb-3" />
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Ambiente Familiar</h3>
+              <p className="text-gray-600 text-center">Um lar acolhedor onde residentes se sentem parte da família Santa Ana</p>
             </div>
           </div>
 
@@ -52,18 +51,20 @@ export const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
             <Button 
               size="lg" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg"
+              className="bg-gradient-to-r from-[#FFB5A7] to-[#A8E6CF] hover:from-[#FF9F8F] hover:to-[#96D7B8] text-gray-800 px-8 py-3 text-lg"
               onClick={scrollToContact}
             >
-              Agendar Visita
+              <MessageCircle className="w-5 h-5 mr-2" />
+              WhatsApp
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-green-600 text-green-600 hover:bg-green-50 px-8 py-3 text-lg"
-              onClick={() => document.getElementById("tour")?.scrollIntoView({ behavior: "smooth" })}
+              className="border-[#FFB5A7] text-[#FFB5A7] hover:bg-[#FFB5A7]/10 px-8 py-3 text-lg"
+              onClick={scrollToContact}
             >
-              Tour Virtual
+              <Calendar className="w-5 h-5 mr-2" />
+              Agendar Visita
             </Button>
           </div>
         </div>

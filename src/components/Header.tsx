@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Menu, X, Phone, MessageCircle, Mail } from "lucide-react";
+import { Menu, X, Phone, MessageCircle, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface HeaderProps {
@@ -20,11 +20,11 @@ export const Header = ({ activeSection }: HeaderProps) => {
 
   const navItems = [
     { id: "home", label: "Início" },
-    { id: "about", label: "Sobre Nós" },
-    { id: "services", label: "Serviços" },
-    { id: "routine", label: "Rotina" },
-    { id: "events", label: "Eventos" },
-    { id: "tour", label: "Tour Virtual" },
+    { id: "about", label: "Nossa Essência" },
+    { id: "services", label: "Portfólio de Cuidados" },
+    { id: "routine", label: "Rotina Diária" },
+    { id: "events", label: "Momentos" },
+    { id: "gallery", label: "Galeria" },
     { id: "contact", label: "Contato" }
   ];
 
@@ -38,14 +38,14 @@ export const Header = ({ activeSection }: HeaderProps) => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-colors hover:text-blue-600 ${
+                className={`text-sm font-medium transition-colors px-3 py-2 rounded-md hover:bg-[#C1CFC8] ${
                   activeSection === item.id
-                    ? "text-blue-600 border-b-2 border-blue-600 pb-1"
+                    ? "text-blue-600 bg-[#C1CFC8]"
                     : "text-gray-700"
                 }`}
               >
@@ -56,13 +56,13 @@ export const Header = ({ activeSection }: HeaderProps) => {
 
           {/* Contact Buttons */}
           <div className="hidden lg:flex items-center space-x-2">
-            <Button size="sm" variant="outline" className="text-green-600 border-green-600 hover:bg-green-50">
+            <Button size="sm" className="bg-gradient-to-r from-[#FFB5A7] to-[#A8E6CF] hover:from-[#FF9F8F] hover:to-[#96D7B8] text-gray-800 border-0">
               <MessageCircle className="w-4 h-4 mr-1" />
               WhatsApp
             </Button>
-            <Button size="sm" variant="outline" className="text-blue-600 border-blue-600 hover:bg-blue-50">
-              <Phone className="w-4 h-4 mr-1" />
-              (11) 9-9999-9999
+            <Button size="sm" className="bg-gradient-to-r from-[#FFB5A7] to-[#A8E6CF] hover:from-[#FF9F8F] hover:to-[#96D7B8] text-gray-800 border-0">
+              <Calendar className="w-4 h-4 mr-1" />
+              Agendar Visita
             </Button>
           </div>
 
@@ -96,13 +96,13 @@ export const Header = ({ activeSection }: HeaderProps) => {
                 </button>
               ))}
               <div className="flex flex-col space-y-2 pt-3 border-t border-gray-100">
-                <Button size="sm" variant="outline" className="text-green-600 border-green-600 hover:bg-green-50 justify-start">
+                <Button size="sm" className="bg-gradient-to-r from-[#FFB5A7] to-[#A8E6CF] hover:from-[#FF9F8F] hover:to-[#96D7B8] text-gray-800 border-0 justify-start">
                   <MessageCircle className="w-4 h-4 mr-2" />
                   WhatsApp
                 </Button>
-                <Button size="sm" variant="outline" className="text-blue-600 border-blue-600 hover:bg-blue-50 justify-start">
-                  <Phone className="w-4 h-4 mr-2" />
-                  (11) 9-9999-9999
+                <Button size="sm" className="bg-gradient-to-r from-[#FFB5A7] to-[#A8E6CF] hover:from-[#FF9F8F] hover:to-[#96D7B8] text-gray-800 border-0 justify-start">
+                  <Calendar className="w-4 h-4 mr-2" />
+                  Agendar Visita
                 </Button>
               </div>
             </nav>
