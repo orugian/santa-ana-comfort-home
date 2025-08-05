@@ -1,44 +1,44 @@
-
 import { useState } from "react";
 import { MapPin, Phone, Mail, MessageCircle, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-
 export const ContactSection = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Here you would typically send the form data to your backend
     console.log("Form submitted:", formData);
-    
     toast({
       title: "Mensagem Enviada!",
-      description: "Entraremos em contato em breve. Obrigado pelo interesse no nosso trabalho.",
+      description: "Entraremos em contato em breve. Obrigado pelo interesse no nosso trabalho."
     });
-    
-    // Reset form
-    setFormData({ name: "", email: "", phone: "", message: "" });
-  };
 
+    // Reset form
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: ""
+    });
+  };
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
+  return <section className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -147,72 +147,7 @@ export const ContactSection = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Envie sua Mensagem</h3>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Label htmlFor="name">Nome Completo</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder="Seu nome completo"
-                    className="mt-1"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="seu@email.com"
-                    className="mt-1"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="phone">Telefone</Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    required
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    placeholder="(11) 9-9999-9999"
-                    className="mt-1"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="message">Mensagem</Label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder="Conte-nos como podemos ajudar você e sua família..."
-                    rows={4}
-                    className="mt-1 w-full px-3 py-2 border border-input rounded-md bg-background text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                  />
-                </div>
-
-                <Button type="submit" size="lg" className="w-full bg-blue-600 hover:bg-blue-700">
-                  <Send className="w-4 h-4 mr-2" />
-                  Enviar Mensagem
-                </Button>
-              </form>
-            </div>
+            
           </div>
 
           {/* Map Section */}
@@ -235,6 +170,5 @@ export const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
