@@ -130,19 +130,7 @@ export const ContactSection = () => {
             </div>
 
             {/* Quick Actions */}
-            <div className="bg-white p-6 rounded-lg shadow-sm w-full max-w-md">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">Contato Rápido</h4>
-              <div className="flex flex-col gap-4">
-                <Button className="bg-gradient-to-r from-[#FFB5A7] to-[#A8E6CF] hover:from-[#FF9F8F] hover:to-[#96D7B8] text-gray-800 w-full">
-                  <MessageCircle className="w-4 h-4 mr-2" />
-                  WhatsApp
-                </Button>
-                <Button variant="outline" className="border-[#C1CFC8] text-gray-700 hover:bg-[#C1CFC8]/20 w-full">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Ligar Agora
-                </Button>
-              </div>
-            </div>
+            
           </div>
 
           {/* Map Section */}
