@@ -47,26 +47,6 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Call to Action */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-[#FFB5A7] to-[#A8E6CF] hover:from-[#FF9F8F] hover:to-[#96D7B8] text-gray-800 px-8 py-3 text-lg"
-              onClick={scrollToContact}
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              WhatsApp
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-[#FFB5A7] text-[#FFB5A7] hover:bg-[#FFB5A7]/10 px-8 py-3 text-lg"
-              onClick={scrollToContact}
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Agendar Visita
-            </Button>
-          </div>
         </div>
       </div>
       

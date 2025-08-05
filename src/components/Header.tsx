@@ -21,10 +21,9 @@ export const Header = ({ activeSection }: HeaderProps) => {
   const navItems = [
     { id: "home", label: "Início" },
     { id: "about", label: "Nossa Essência" },
-    { id: "services", label: "Portfólio de Cuidados" },
+    { id: "services", label: "Cuidados" },
     { id: "routine", label: "Rotina Diária" },
     { id: "events", label: "Momentos" },
-    { id: "gallery", label: "Galeria" },
     { id: "contact", label: "Contato" }
   ];
 
@@ -59,10 +58,6 @@ export const Header = ({ activeSection }: HeaderProps) => {
             <Button size="sm" className="bg-gradient-to-r from-[#FFB5A7] to-[#A8E6CF] hover:from-[#FF9F8F] hover:to-[#96D7B8] text-gray-800 border-0">
               <MessageCircle className="w-4 h-4 mr-1" />
               WhatsApp
-            </Button>
-            <Button size="sm" className="bg-gradient-to-r from-[#FFB5A7] to-[#A8E6CF] hover:from-[#FF9F8F] hover:to-[#96D7B8] text-gray-800 border-0">
-              <Calendar className="w-4 h-4 mr-1" />
-              Agendar Visita
             </Button>
           </div>
 
@@ -99,10 +94,6 @@ export const Header = ({ activeSection }: HeaderProps) => {
                 <Button size="sm" className="bg-gradient-to-r from-[#FFB5A7] to-[#A8E6CF] hover:from-[#FF9F8F] hover:to-[#96D7B8] text-gray-800 border-0 justify-start">
                   <MessageCircle className="w-4 h-4 mr-2" />
                   WhatsApp
-                </Button>
-                <Button size="sm" className="bg-gradient-to-r from-[#FFB5A7] to-[#A8E6CF] hover:from-[#FF9F8F] hover:to-[#96D7B8] text-gray-800 border-0 justify-start">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  Agendar Visita
                 </Button>
               </div>
             </nav>
