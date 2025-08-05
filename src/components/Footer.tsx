@@ -1,16 +1,14 @@
-
 import { Heart, Phone, Mail, MapPin, MessageCircle, Instagram, Facebook } from "lucide-react";
-
 export const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <footer className="bg-gray-900 text-white">
+  return <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
@@ -41,42 +39,27 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Navegação</h4>
             <ul className="space-y-2">
               <li>
-                <button 
-                  onClick={() => scrollToSection("home")}
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
+                <button onClick={() => scrollToSection("home")} className="text-gray-300 hover:text-white transition-colors">
                   Início
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection("about")}
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
+                <button onClick={() => scrollToSection("about")} className="text-gray-300 hover:text-white transition-colors">
                   Sobre Nós
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection("services")}
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
+                <button onClick={() => scrollToSection("services")} className="text-gray-300 hover:text-white transition-colors">
                   Serviços
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection("events")}
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
+                <button onClick={() => scrollToSection("events")} className="text-gray-300 hover:text-white transition-colors">
                   Eventos
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection("contact")}
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
+                <button onClick={() => scrollToSection("contact")} className="text-gray-300 hover:text-white transition-colors">
                   Contato
                 </button>
               </li>
@@ -123,9 +106,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 Lar Santa Ana. Todos os direitos reservados.
-            </p>
+            <p className="text-gray-400 text-sm">© 2025 Lar Santa Ana. Todos os direitos reservados.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Política de Privacidade
@@ -137,6 +118,5 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
