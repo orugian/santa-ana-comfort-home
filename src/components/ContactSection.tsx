@@ -55,99 +55,94 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="flex flex-col items-center gap-6">
             {/* Contact Information */}
-            <div className="flex items-center justify-center min-h-screen">
-              <div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-6">Informações de Contato</h3>
-                
-                <div className="space-y-6">
-                  {/* Phone */}
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-blue-100 p-3 rounded-lg">
-                      <Phone className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Telefone</h4>
-                      <p className="text-gray-600">(11) 9-9999-9999</p>
-                      <p className="text-sm text-gray-500">Atendimento das 8h às 18h</p>
-                    </div>
+            <div className="w-full max-w-md">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">Informações de Contato</h3>
+              
+              <div className="space-y-6">
+                {/* Phone */}
+                <div className="flex items-start space-x-4">
+                  <div className="bg-blue-100 p-3 rounded-lg">
+                    <Phone className="w-6 h-6 text-blue-600" />
                   </div>
-
-                  {/* WhatsApp */}
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-green-100 p-3 rounded-lg">
-                      <MessageCircle className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">WhatsApp</h4>
-                      <p className="text-gray-600">(11) 9-9999-9999</p>
-                      <p className="text-sm text-gray-500">Resposta rápida 24h</p>
-                    </div>
-                  </div>
-
-                  {/* Email */}
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-purple-100 p-3 rounded-lg">
-                      <Mail className="w-6 h-6 text-purple-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Email</h4>
-                      <p className="text-gray-600">contato@larsantaana.com.br</p>
-                      <p className="text-sm text-gray-500">Resposta em até 24h</p>
-                    </div>
-                  </div>
-
-                  {/* Address */}
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-orange-100 p-3 rounded-lg">
-                      <MapPin className="w-6 h-6 text-orange-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Endereço</h4>
-                      <p className="text-gray-600">
-                        Rua das Flores, 123<br />
-                        Tatuapé - São Paulo/SP<br />
-                        CEP: 03010-000
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Hours */}
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-teal-100 p-3 rounded-lg">
-                      <Clock className="w-6 h-6 text-teal-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Horário de Visitas</h4>
-                      <p className="text-gray-600">
-                        Segunda a Sexta: 9h às 17h<br />
-                        Sábados: 9h às 15h<br />
-                        Domingos: Mediante agendamento
-                      </p>
-                    </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Telefone</h4>
+                    <p className="text-gray-600">(11) 9-9999-9999</p>
+                    <p className="text-sm text-gray-500">Atendimento das 8h às 18h</p>
                   </div>
                 </div>
-              </div>
 
-              {/* Quick Actions */}
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">Contato Rápido</h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Button className="bg-green-600 hover:bg-green-700 justify-start">
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    WhatsApp
-                  </Button>
-                  <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 justify-start">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Ligar Agora
-                  </Button>
+                {/* WhatsApp */}
+                <div className="flex items-start space-x-4">
+                  <div className="bg-green-100 p-3 rounded-lg">
+                    <MessageCircle className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">WhatsApp</h4>
+                    <p className="text-gray-600">(11) 9-9999-9999</p>
+                    <p className="text-sm text-gray-500">Resposta rápida 24h</p>
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="flex items-start space-x-4">
+                  <div className="bg-purple-100 p-3 rounded-lg">
+                    <Mail className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Email</h4>
+                    <p className="text-gray-600">contato@larsantaana.com.br</p>
+                    <p className="text-sm text-gray-500">Resposta em até 24h</p>
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-start space-x-4">
+                  <div className="bg-orange-100 p-3 rounded-lg">
+                    <MapPin className="w-6 h-6 text-orange-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Endereço</h4>
+                    <p className="text-gray-600">
+                      Rua das Flores, 123<br />
+                      Tatuapé - São Paulo/SP<br />
+                      CEP: 03010-000
+                    </p>
+                  </div>
+                </div>
+
+                {/* Hours */}
+                <div className="flex items-start space-x-4">
+                  <div className="bg-teal-100 p-3 rounded-lg">
+                    <Clock className="w-6 h-6 text-teal-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Horário de Visitas</h4>
+                    <p className="text-gray-600">
+                      Segunda a Sexta: 9h às 17h<br />
+                      Sábados: 9h às 15h<br />
+                      Domingos: Mediante agendamento
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
-            
+            {/* Quick Actions */}
+            <div className="bg-white p-6 rounded-lg shadow-sm w-full max-w-md">
+              <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">Contato Rápido</h4>
+              <div className="flex flex-col gap-4">
+                <Button className="bg-gradient-to-r from-[#FFB5A7] to-[#A8E6CF] hover:from-[#FF9F8F] hover:to-[#96D7B8] text-gray-800 w-full">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  WhatsApp
+                </Button>
+                <Button variant="outline" className="border-[#C1CFC8] text-gray-700 hover:bg-[#C1CFC8]/20 w-full">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Ligar Agora
+                </Button>
+              </div>
+            </div>
           </div>
 
           {/* Map Section */}
