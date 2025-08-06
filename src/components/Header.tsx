@@ -59,7 +59,7 @@ export const Header = ({ activeSection }: HeaderProps) => {
 
           {/* Contact Buttons */}
           <div className="hidden lg:flex items-center space-x-2">
-            <Button size="sm" className="bg-gradient-to-r from-[#FFB5A7] to-[#A8E6CF] hover:from-[#FF9F8F] hover:to-[#96D7B8] text-gray-800 border-0">
+            <Button size="sm" variant="whatsapp">
               <MessageCircle className="w-4 h-4 mr-1" />
               WhatsApp
             </Button>
@@ -95,7 +95,7 @@ export const Header = ({ activeSection }: HeaderProps) => {
                 </button>
               ))}
               <div className="flex flex-col space-y-2 pt-3 border-t border-gray-100">
-                <Button size="sm" className="bg-gradient-to-r from-[#FFB5A7] to-[#A8E6CF] hover:from-[#FF9F8F] hover:to-[#96D7B8] text-gray-800 border-0 justify-start">
+                <Button size="sm" variant="whatsapp" className="justify-start">
                   <MessageCircle className="w-4 h-4 mr-2" />
                   WhatsApp
                 </Button>
