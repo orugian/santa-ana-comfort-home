@@ -48,10 +48,10 @@ export const ContactSection = () => {
               Agende uma visita ou tire suas dúvidas. Nossa equipe responderá com carinho.
             </p>
             <div className="mt-8">
-              <button className="bg-gradient-to-r from-[#FFB5A7] to-[#A8E6CF] hover:from-[#FF9F8F] hover:to-[#96D7B8] text-gray-800 px-12 py-4 rounded-lg text-xl font-semibold w-full max-w-md">
-                <MessageCircle className="w-6 h-6 mr-3 inline" />
+              <Button variant="whatsapp" className="px-12 py-4 text-xl font-semibold w-full max-w-md">
+                <MessageCircle className="w-6 h-6 mr-3" />
                 WhatsApp
-              </button>
+              </Button>
             </div>
           </div>
 
