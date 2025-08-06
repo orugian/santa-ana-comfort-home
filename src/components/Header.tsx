@@ -33,7 +33,11 @@ export const Header = ({ activeSection }: HeaderProps) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-blue-700">Lar Santa Ana</h1>
+            <img 
+              src="/lar-santa-ana-logo.png" 
+              alt="Lar Santa Ana logo" 
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
