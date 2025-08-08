@@ -28,7 +28,7 @@ export const Header = ({ activeSection }: HeaderProps) => {
   ];
 
   return (
-    <header className="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-blue-100">
+    <header className="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -46,10 +46,10 @@ export const Header = ({ activeSection }: HeaderProps) => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-colors px-3 py-2 rounded-md hover:bg-[#C1CFC8] ${
+                    className={`text-sm font-medium transition-colors px-3 py-2 rounded-md hover:bg-accent-light ${
                   activeSection === item.id
-                    ? "text-blue-600 bg-[#C1CFC8]"
-                    : "text-gray-700"
+                    ? "text-primary bg-accent-light"
+                    : "text-foreground"
                 }`}
               >
                 {item.label}
@@ -85,10 +85,10 @@ export const Header = ({ activeSection }: HeaderProps) => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-left px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      className={`text-left px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     activeSection === item.id
-                      ? "text-blue-600 bg-blue-50"
-                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                      ? "text-primary bg-accent-light"
+                      : "text-foreground hover:text-primary hover:bg-accent-light"
                   }`}
                 >
                   {item.label}

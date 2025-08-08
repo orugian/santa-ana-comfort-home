@@ -5,7 +5,7 @@ export const ServicesSection = () => {
   const serviceCategories = [
     {
       category: "Médico & Terapia",
-      color: "from-[#FFB5A7] to-[#FF9F8F]",
+      color: "from-primary to-accent",
       services: [
         {
           icon: Stethoscope,
@@ -21,7 +21,7 @@ export const ServicesSection = () => {
     },
     {
       category: "Nutrição & Bem-estar",
-      color: "from-[#A8E6CF] to-[#96D7B8]",
+      color: "from-primary to-accent",
       services: [
         {
           icon: UtensilsCrossed,
@@ -37,7 +37,7 @@ export const ServicesSection = () => {
     },
     {
       category: "Lazer & Cultura",
-      color: "from-[#DDA0DD] to-[#D8BFD8]",
+      color: "from-primary to-accent",
       services: [
         {
           icon: Dumbbell,
@@ -53,7 +53,7 @@ export const ServicesSection = () => {
     },
     {
       category: "Apoio Diário",
-      color: "from-[#F0E68C] to-[#DAA520]",
+      color: "from-primary to-accent",
       services: [
         {
           icon: Cross,
@@ -84,13 +84,13 @@ export const ServicesSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
+    <section className="py-20 section-primary-bg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nosso Portfólio de Cuidados</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-primary mb-4">Nosso Portfólio de Cuidados</h2>
+            <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
               Uma suíte completa para bem-estar físico, mental e social.
             </p>
           </div>
@@ -135,24 +135,24 @@ export const ServicesSection = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
               <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Users className="w-8 h-8 text-blue-600" />
+                <div className="bg-accent-light w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Users className="w-8 h-8 text-primary" />
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">Equipe Multidisciplinar</h4>
                 <p className="text-sm text-gray-600">Médicos, enfermeiros, fisioterapeutas, psicólogos e cuidadores especializados</p>
               </div>
               
               <div className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Heart className="w-8 h-8 text-green-600" />
+                <div className="bg-accent-light w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Heart className="w-8 h-8 text-primary" />
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">Cuidado 24h</h4>
                 <p className="text-sm text-gray-600">Monitoramento e assistência disponível 24 horas por dia, 7 dias por semana</p>
               </div>
               
               <div className="text-center">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Stethoscope className="w-8 h-8 text-purple-600" />
+                <div className="bg-accent-light w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Stethoscope className="w-8 h-8 text-primary" />
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">Avaliação Contínua</h4>
                 <p className="text-sm text-gray-600">Acompanhamento regular do estado de saúde e ajustes no plano de cuidados</p>

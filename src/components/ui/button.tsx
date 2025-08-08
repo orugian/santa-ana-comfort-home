@@ -13,9 +13,9 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border-2 border-secondary bg-transparent text-secondary hover:bg-secondary-hover",
+          "border-2 border-secondary bg-transparent text-secondary hover:bg-secondary/15",
         secondary:
-          "border-2 border-secondary bg-transparent text-secondary hover:bg-secondary-hover",
+          "border-2 border-secondary bg-transparent text-secondary hover:bg-secondary/15",
         ghost: "hover:bg-accent-hover hover:text-accent",
         link: "text-accent underline-offset-4 hover:underline hover:text-primary",
         whatsapp: "whatsapp-btn",
