@@ -85,7 +85,7 @@ export const ServicesSection = () => {
                     </div>
                     
                     <h4 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors">
-                      {service.title}
+                      Fisioterapia, Enfermagem e Fonoterapia
                     </h4>
                     
                     <p className="text-gray-600 leading-relaxed text-sm">
