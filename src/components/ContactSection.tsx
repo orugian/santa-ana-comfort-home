@@ -43,12 +43,12 @@ export const ContactSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Vamos Conversar!</h2>
+            <h2 className="text-4xl font-bold mb-4 text-slate-950">Vamos Conversar!</h2>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
               Agende uma visita ou tire suas dúvidas. Nossa equipe responderá com carinho.
             </p>
             <div className="mt-8">
-              <Button variant="whatsapp" className="px-12 py-4 text-xl font-semibold w-full max-w-md">
+              <Button variant="whatsapp" className="px-12 py-4 text-xl w-full max-w-md font-bold rounded-xl">
                 <MessageCircle className="w-6 h-6 mr-3" />
                 WhatsApp
               </Button>
