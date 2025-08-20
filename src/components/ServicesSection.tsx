@@ -69,7 +69,7 @@ export const ServicesSection = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-slate-950">Nossos Cuidados</h2>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-              Uma suíte completa para bem-estar físico, mental e social.
+              A moradia completa e segura que você procura e o idoso merece. No nosso residencial você encontra bem estar físico, mental e social.
             </p>
           </div>
 
