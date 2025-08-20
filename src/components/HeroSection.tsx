@@ -11,11 +11,11 @@ export const HeroSection = () => {
   };
   return <section className="relative min-h-screen flex items-center justify-center section-secondary-bg pt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center text-slate-950">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-            <span className="text-[#F8B4C8]">Ternura</span> e{" "}
-            <span className="text-[#6B7280]">Excelência</span>{" "}
+            <span className="text-slate-950">Ternura</span> e{" "}
+            <span className="text-slate-950">Excelência</span>{" "}
             em Cada Detalhe
           </h1>
           
