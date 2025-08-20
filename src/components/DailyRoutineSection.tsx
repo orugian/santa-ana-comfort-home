@@ -62,7 +62,7 @@ export const DailyRoutineSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#005BAC] mb-4">Nossa Rotina Diária</h2>
+            <h2 className="text-4xl font-bold mb-4 text-slate-950">Nossa Rotina Diária</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Atividades pensadas para promover saúde, conforto e alegria a cada momento do dia.
             </p>
@@ -77,7 +77,7 @@ export const DailyRoutineSection = () => {
               {routineItems.map((item, index) => <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                   {/* Time Circle */}
                   <div className="absolute left-8 md:left-1/2 w-16 h-16 rounded-full bg-white border-4 border-[#2A70D6] flex items-center justify-center transform md:-translate-x-8 z-10 shadow-lg">
-                    <span className="text-sm font-bold text-[#2A70D6]">{item.time}</span>
+                    <span className="text-sm font-bold text-slate-950">{item.time}</span>
                   </div>
 
                   {/* Content Card */}
@@ -86,10 +86,12 @@ export const DailyRoutineSection = () => {
                       <div className="flex items-start space-x-4">
                         <div className={`p-3 rounded-lg ${item.color} relative overflow-hidden`}>
                           <div className={`absolute inset-0 ${item.iconBg} opacity-20`}></div>
-                          <item.icon className="w-6 h-6 relative z-10 text-white" style={{filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.1))'}} />
+                          <item.icon className="w-6 h-6 relative z-10 text-white" style={{
+                        filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.1))'
+                      }} />
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-lg font-semibold text-[#005BAC] mb-2">
+                          <h3 className="text-lg font-semibold mb-2 text-slate-950">
                             {item.title}
                           </h3>
                           <p className="text-gray-600 leading-relaxed">

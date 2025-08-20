@@ -1,23 +1,21 @@
-
 import { Button } from "@/components/ui/button";
 import { Heart, Stethoscope, Users, MessageCircle, Calendar } from "lucide-react";
-
 export const HeroSection = () => {
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center section-secondary-bg pt-16">
+  return <section className="relative min-h-screen flex items-center justify-center section-secondary-bg pt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-            <span className="text-[#F8B4C8]">Ternura</span> e{" "}
-            <span className="text-[#6B7280]">Excelência</span>{" "}
+            <span className="text-slate-950">Ternura</span> e{" "}
+            <span className="text-slate-950">Excelência</span>{" "}
             em Cada Detalhe
           </h1>
           
@@ -52,6 +50,5 @@ export const HeroSection = () => {
       
       {/* Decorative Elements */}
       <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent"></div>
-    </section>
-  );
+    </section>;
 };

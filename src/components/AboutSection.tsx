@@ -1,14 +1,11 @@
-
 import { Award, Clock, MapPin } from "lucide-react";
-
 export const AboutSection = () => {
-  return (
-    <section className="py-20 bg-white">
+  return <section className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Nossa Essência</h2>
+            <h2 className="text-4xl font-bold mb-4 text-slate-950">Nossa Essência</h2>
           </div>
 
           {/* Mission, Vision, Values Cards */}
@@ -63,6 +60,5 @@ export const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
