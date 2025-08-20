@@ -6,7 +6,7 @@ export const ServicesSection = () => {
     services: [{
       icon: Stethoscope,
       title: "Cuidados Médicos",
-      description: "Acompanhamento médico contínuo com especialistas em geriatria"
+      description: "Acompanhamento médico com especialistas em geriatria"
     }, {
       icon: Brain,
       title: "Fisioterapia, Enfermagem e Fonoterapia",
