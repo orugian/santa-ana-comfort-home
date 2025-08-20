@@ -9,7 +9,7 @@ export const ServicesSection = () => {
       description: "Acompanhamento médico contínuo com especialistas em geriatria"
     }, {
       icon: Brain,
-      title: "Gerontologia",
+      title: "Fisioterapia, Enfermagem e Fonoterapia",
       description: "Equipe especializada em cuidado integral de idosos"
     }]
   }, {
