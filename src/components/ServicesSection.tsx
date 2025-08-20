@@ -73,26 +73,34 @@ export const ServicesSection = () => {
             </p>
           </div>
 
+          {/* Category Headers */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
+            {serviceCategories.map((category, categoryIndex) => (
+              <div key={categoryIndex} className={`bg-gradient-to-r ${category.color} rounded-xl text-center min-h-16 flex items-center justify-center p-4`}>
+                <h3 className="text-xl font-bold text-slate-950">{category.category}</h3>
+              </div>
+            ))}
+          </div>
+
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {serviceCategories.map((category, categoryIndex) => <div key={categoryIndex} className="space-y-6">
-                <div className={`bg-gradient-to-r ${category.color} p-6 rounded-lg text-white text-center`}>
-                  <h3 className="text-xl font-bold mb-2 text-slate-950">{category.category}</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch">
+            {serviceCategories.flatMap((category, categoryIndex) => 
+              category.services.map((service, serviceIndex) => (
+                <div key={`${categoryIndex}-${serviceIndex}`} className="group bg-white border border-gray-400/20 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer h-full flex flex-col min-h-[220px]">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-primary to-accent flex items-center justify-center mb-2 transition-transform duration-300 group-hover:scale-110">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors min-h-12 line-clamp-2">
+                    {service.title}
+                  </h4>
+                  
+                  <p className="text-gray-600 leading-relaxed text-sm flex-1 line-clamp-4">
+                    {service.description}
+                  </p>
                 </div>
-                {category.services.map((service, serviceIndex) => <div key={serviceIndex} className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 p-6 hover:-translate-y-1 cursor-pointer">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110`}>
-                      <service.icon className="w-6 h-6 text-white" />
-                    </div>
-                    
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors">
-                      {service.title}
-                    </h4>
-                    
-                    <p className="text-gray-600 leading-relaxed text-sm">
-                      {service.description}
-                    </p>
-                  </div>)}
-              </div>)}
+              ))
+            )}
           </div>
 
           {/* Additional Info */}
