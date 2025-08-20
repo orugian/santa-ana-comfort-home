@@ -58,7 +58,7 @@ export const ContactSection = () => {
           <div className="flex flex-col items-center gap-6">
             {/* Contact Information */}
             <div className="w-full max-w-md">
-              <h3 className="text-2xl font-semibold text-foreground mb-6 text-center">Informações de Contato</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-center text-slate-950">Informações de Contato</h3>
               
               <div className="space-y-6">
                 {/* Phone */}
@@ -67,9 +67,9 @@ export const ContactSection = () => {
                     <Phone className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Telefone</h4>
-                    <p className="text-foreground/80">(11) 9-9999-9999</p>
-                    <p className="text-sm text-foreground/70">Atendimento das 8h às 18h</p>
+                    <h4 className="font-semibold text-slate-950">Telefone</h4>
+                    <p className="text-base text-slate-950">(11) 9-9999-9999</p>
+                    <p className="text-sm text-zinc-600">Atendimento das 8h às 18h</p>
                   </div>
                 </div>
 
@@ -79,9 +79,9 @@ export const ContactSection = () => {
                     <MessageCircle className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">WhatsApp</h4>
-                    <p className="text-foreground/80">(11) 9-9999-9999</p>
-                    <p className="text-sm text-foreground/70">Resposta rápida 24h</p>
+                    <h4 className="font-semibold text-slate-950">WhatsApp</h4>
+                    <p className="text-zinc-700">(11) 9-9999-9999</p>
+                    <p className="text-sm text-zinc-700">Resposta rápida 24h</p>
                   </div>
                 </div>
 
@@ -91,9 +91,9 @@ export const ContactSection = () => {
                     <Mail className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Email</h4>
-                    <p className="text-foreground/80">contato@larsantaana.com.br</p>
-                    <p className="text-sm text-foreground/70">Resposta em até 24h</p>
+                    <h4 className="font-semibold text-slate-950">Email</h4>
+                    <p className="text-zinc-700">contato@larsantaana.com.br</p>
+                    <p className="text-sm text-zinc-700">Resposta em até 24h</p>
                   </div>
                 </div>
 
@@ -103,8 +103,8 @@ export const ContactSection = () => {
                     <MapPin className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Endereço</h4>
-                    <p className="text-foreground/80">
+                    <h4 className="font-semibold text-slate-950">Endereço</h4>
+                    <p className="text-zinc-700">
                       Rua das Flores, 123<br />
                       Tatuapé - São Paulo/SP<br />
                       CEP: 03010-000
@@ -118,8 +118,8 @@ export const ContactSection = () => {
                     <Clock className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Horário de Visitas</h4>
-                    <p className="text-foreground/80">
+                    <h4 className="font-semibold text-slate-950">Horário de Visitas</h4>
+                    <p className="text-zinc-700">
                       Segunda a Sexta: 9h às 17h<br />
                       Sábados: 9h às 15h<br />
                       Domingos: Mediante agendamento
@@ -135,16 +135,16 @@ export const ContactSection = () => {
 
           {/* Map Section */}
           <div className="mt-16">
-            <h3 className="text-2xl font-semibold text-foreground mb-6 text-center">Nossa Localização</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-center text-slate-950">Nossa Localização</h3>
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
               <div className="aspect-video bg-gray-200 flex items-center justify-center">
                 <div className="text-center">
-                  <MapPin className="w-12 h-12 text-foreground/60 mx-auto mb-3" />
-                  <h4 className="text-lg font-semibold text-foreground mb-2">Mapa Interativo</h4>
-                  <p className="text-foreground/70">
+                  <MapPin className="w-12 h-12 text-foreground/60 mx-auto mb-3 rounded-none bg-transparent" />
+                  <h4 className="text-lg mb-2 text-slate-950 font-medium">Mapa Interativo</h4>
+                  <p className="text-zinc-700">
                     Rua das Flores, 123 - Tatuapé, São Paulo/SP
                   </p>
-                  <Button variant="secondary" className="mt-4">
+                  <Button variant="secondary" className="mt-4 bg-black/0 font-bold text-[#25d366]">
                     Abrir no Google Maps
                   </Button>
                 </div>

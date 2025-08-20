@@ -36,10 +36,10 @@ export const Footer = () => {
 
           {/* Navigation */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Navegação</h4>
+            <h4 className="text-lg font-semibold mb-4 text-slate-950">Navegação</h4>
             <ul className="space-y-2">
               <li>
-                <button onClick={() => scrollToSection("home")} className="text-foreground/70 hover:text-primary transition-colors">
+                <button onClick={() => scrollToSection("home")} className="transition-colors text-zinc-600">
                   Início
                 </button>
               </li>
@@ -68,7 +68,7 @@ export const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Nossos Serviços</h4>
+            <h4 className="text-lg mb-4 font-semibold text-slate-950">Nossos Serviços</h4>
             <ul className="space-y-2 text-foreground/70">
               <li>Cuidados Médicos</li>
               <li>Nutrição Especializada</li>
@@ -81,7 +81,7 @@ export const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contato</h4>
+            <h4 className="text-lg font-semibold mb-4 text-slate-950">Contato</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary" />
