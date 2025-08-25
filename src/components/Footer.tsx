@@ -17,10 +17,7 @@ export const Footer = () => {
               <Heart className="w-8 h-8 text-red-400" />
               <h3 className="text-2xl font-bold">Lar Santa Ana</h3>
             </div>
-            <p className="text-foreground/80 leading-relaxed">
-              Mais de 10 anos dedicados ao cuidado de idosos com amor, 
-              respeito e profissionalismo no coração de Tatuapé.
-            </p>
+            <p className="text-foreground/80 leading-relaxed">Mais de 15 anos dedicados ao cuidado de idosos com amor, respeito e profissionalismo no coração de Tatuapé.</p>
             <div className="flex space-x-4">
               <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
                 <Instagram className="w-6 h-6" />
