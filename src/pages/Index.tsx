@@ -8,6 +8,7 @@ import { DailyRoutineSection } from "@/components/DailyRoutineSection";
 import { EventsSection } from "@/components/EventsSection";
 import { ContactAndLocationSection } from "@/components/ContactAndLocationSection";
 import { Footer } from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -62,6 +63,7 @@ const Index = () => {
       </main>
       
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
