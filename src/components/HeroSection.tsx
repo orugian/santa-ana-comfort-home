@@ -13,8 +13,10 @@ export const HeroSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in text-slate-950">
-            Residencial para Idosos
+          <h1 className="text-4xl mb-6 animate-fade-in text-slate-950 font-bold md:text-6xl">
+            <span className="text-slate-950">Ternura</span> e{" "}
+            <span className="text-slate-950">Excelência</span>{" "}
+            em Cada Detalhe
           </h1>
           
           {/* Subtitle */}
