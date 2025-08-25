@@ -4,56 +4,56 @@ export const DailyRoutineSection = () => {
     time: "07:00",
     icon: Sun,
     title: "Despertar e Cuidados Matinais",
-    description: "Acordar suave, higiene pessoal assistida e preparo para o café da manhã",
+    description: "Acordar suave, higiene pessoal assistida e preparo para o café da manhã.",
     color: "bg-[#2A70D6]/10 text-[#2A70D6]",
     iconBg: "bg-[#2A70D6]"
   }, {
-    time: "08:00",
+    time: "08:30",
     icon: Coffee,
     title: "Café da Manhã Nutritivo",
-    description: "Refeição balanceada supervisionada por nutricionista, adaptada às necessidades individuais",
+    description: "Refeição balanceada supervisionada por nutricionista, adaptada às necessidades individuais.",
     color: "bg-[#85C441]/10 text-[#85C441]",
     iconBg: "bg-[#85C441]"
   }, {
-    time: "09:30",
+    time: "10:00",
     icon: Activity,
-    title: "Atividades Físicas",
-    description: "Exercícios adaptados para idosos, fisioterapia e atividades de mobilidade",
+    title: "Atividades Físicas no Jardim",
+    description: "Exercícios adaptados ao ar livre: alongamentos, mobilidade e fisioterapia leve.",
     color: "bg-[#005BAC]/10 text-[#005BAC]",
     iconBg: "bg-[#005BAC]"
-  }, {
-    time: "11:00",
-    icon: Gamepad2,
-    title: "Estimulação Cognitiva",
-    description: "Jogos de memória, palavras cruzadas, leitura e atividades para manter a mente ativa",
-    color: "bg-[#2A70D6]/10 text-[#2A70D6]",
-    iconBg: "bg-[#2A70D6]"
   }, {
     time: "12:00",
     icon: UtensilsCrossed,
     title: "Almoço e Descanso",
-    description: "Refeição principal do dia seguida de momento de relaxamento e descanso",
+    description: "Refeição principal do dia seguida de um momento de relaxamento.",
     color: "bg-[#85C441]/10 text-[#85C441]",
     iconBg: "bg-[#85C441]"
   }, {
     time: "15:00",
+    icon: Coffee,
+    title: "Lanche da Tarde",
+    description: "Lanche leve e hidratação para repor as energias antes das atividades da tarde.",
+    color: "bg-[#2A70D6]/10 text-[#2A70D6]",
+    iconBg: "bg-[#2A70D6]"
+  }, {
+    time: "16:00",
     icon: Heart,
-    title: "Atividades Sociais",
-    description: "Momentos de convivência, música, dança e interação social com outros residentes",
+    title: "Convívio & Estímulo Cognitivo",
+    description: "Atividades sociais com jogos de memória, leitura, música e interação em grupo.",
     color: "bg-[#005BAC]/10 text-[#005BAC]",
     iconBg: "bg-[#005BAC]"
   }, {
     time: "18:00",
     icon: UtensilsCrossed,
-    title: "Jantar em Família",
-    description: "Refeição noturna em ambiente acolhedor, promovendo socialização",
+    title: "Jantar",
+    description: "Refeição noturna em ambiente acolhedor, promovendo socialização.",
     color: "bg-[#2A70D6]/10 text-[#2A70D6]",
     iconBg: "bg-[#2A70D6]"
   }, {
     time: "20:00",
     icon: Moon,
     title: "Preparação para Descanso",
-    description: "Atividades relaxantes, higiene noturna e preparo para uma noite tranquila",
+    description: "Higiene noturna e preparo para uma noite tranquila.",
     color: "bg-[#C1C1C1]/20 text-[#005BAC]",
     iconBg: "bg-[#C1C1C1]"
   }];
