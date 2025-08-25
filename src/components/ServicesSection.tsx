@@ -1,68 +1,86 @@
 import { Heart, Stethoscope, UtensilsCrossed, Brain, Dumbbell, Users, Shirt, Cross } from "lucide-react";
+
 export const ServicesSection = () => {
-  const serviceCategories = [{
-    category: "Médico & Terapia",
-    color: "from-primary to-accent",
-    services: [{
-      icon: Stethoscope,
-      title: "Cuidados Médicos",
-      description: "Acompanhamento médico com especialistas em geriatria"
-    }, {
-      icon: Brain,
-      title: "Fisioterapia, Enfermagem e Fonoterapia",
-      description: "Equipe especializada em cuidado integral de idosos"
-    }]
-  }, {
-    category: "Nutrição & Bem-estar",
-    color: "from-primary to-accent",
-    services: [{
-      icon: UtensilsCrossed,
-      title: "Nutrição Especializada",
-      description: "Planos alimentares supervisionados por nutricionistas"
-    }, {
-      icon: Heart,
-      title: "Apoio Psicológico",
-      description: "Suporte emocional contínuo para bem-estar mental"
-    }]
-  }, {
-    category: "Lazer & Cultura",
-    color: "from-primary to-accent",
-    services: [{
-      icon: Dumbbell,
-      title: "Atividade Física",
-      description: "Exercícios adaptados promovendo mobilidade e força"
-    }, {
-      icon: Brain,
-      title: "Estimulação Cognitiva",
-      description: "Atividades para manter funções cognitivas ativas"
-    }]
-  }, {
-    category: "Apoio Diário",
-    color: "from-primary to-accent",
-    services: [{
-      icon: Cross,
-      title: "Cuidado Espiritual",
-      description: "Apoio espiritual respeitando crenças individuais"
-    }, {
-      icon: Shirt,
-      title: "Serviços de Apoio",
-      description: "Lavanderia e cuidado com pertences pessoais"
-    }]
-  }];
-  const getColorClasses = (color: string) => {
-    const colors = {
-      blue: "bg-blue-500 text-white group-hover:bg-blue-600",
-      purple: "bg-purple-500 text-white group-hover:bg-purple-600",
-      green: "bg-green-500 text-white group-hover:bg-green-600",
-      red: "bg-red-500 text-white group-hover:bg-red-600",
-      orange: "bg-orange-500 text-white group-hover:bg-orange-600",
-      indigo: "bg-indigo-500 text-white group-hover:bg-indigo-600",
-      yellow: "bg-yellow-500 text-white group-hover:bg-yellow-600",
-      teal: "bg-teal-500 text-white group-hover:bg-teal-600"
-    };
-    return colors[color as keyof typeof colors] || colors.blue;
-  };
-  return <section className="py-20 section-primary-bg">
+  const SERVICES = [
+    {
+      key: "medico-terapia",
+      title: "Médico & Terapia",
+      color: "from-primary to-accent",
+      items: [
+        {
+          key: "cuidados-medicos",
+          icon: Stethoscope,
+          title: "Cuidados Médicos",
+          description: "Acompanhamento médico com especialistas em geriatria"
+        },
+        {
+          key: "fisioterapia-enfermagem-fonoterapia",
+          icon: Brain,
+          title: "Fisioterapia, Enfermagem e Fonoterapia",
+          description: "Equipe especializada em cuidado integral de idosos"
+        }
+      ]
+    },
+    {
+      key: "nutricao-bemestar",
+      title: "Nutrição & Bem-estar",
+      color: "from-primary to-accent",
+      items: [
+        {
+          key: "nutricao-especializada",
+          icon: UtensilsCrossed,
+          title: "Nutrição Especializada",
+          description: "Planos alimentares supervisionados por nutricionistas"
+        },
+        {
+          key: "apoio-psicologico",
+          icon: Heart,
+          title: "Apoio Psicológico",
+          description: "Suporte emocional para bem-estar mental"
+        }
+      ]
+    },
+    {
+      key: "lazer-cultura",
+      title: "Lazer & Cultura",
+      color: "from-primary to-accent",
+      items: [
+        {
+          key: "atividade-fisica",
+          icon: Dumbbell,
+          title: "Atividade Física",
+          description: "Exercícios adaptados promovendo mobilidade e força"
+        },
+        {
+          key: "estimulacao-cognitiva",
+          icon: Brain,
+          title: "Estimulação Cognitiva",
+          description: "Atividades para manter funções cognitivas ativas"
+        }
+      ]
+    },
+    {
+      key: "apoio-diario",
+      title: "Apoio Diário",
+      color: "from-primary to-accent",
+      items: [
+        {
+          key: "cuidado-espiritual",
+          icon: Cross,
+          title: "Cuidado Espiritual",
+          description: "Apoio espiritual respeitando crenças individuais"
+        },
+        {
+          key: "servicos-de-apoio",
+          icon: Shirt,
+          title: "Serviços de Apoio",
+          description: "Lavanderia e cuidado com pertences pessoais"
+        }
+      ]
+    }
+  ];
+
+  return <section id="servicos" className="py-20 section-primary-bg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -73,34 +91,33 @@ export const ServicesSection = () => {
             </p>
           </div>
 
-          {/* Category Headers */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
-            {serviceCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className={`bg-gradient-to-r ${category.color} rounded-xl text-center min-h-16 flex items-center justify-center p-4`}>
-                <h3 className="text-xl font-bold text-slate-950">{category.category}</h3>
-              </div>
-            ))}
-          </div>
-
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch">
-            {serviceCategories.flatMap((category, categoryIndex) => 
-              category.services.map((service, serviceIndex) => (
-                <div key={`${categoryIndex}-${serviceIndex}`} className="group bg-white border border-gray-400/20 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer h-full flex flex-col min-h-[220px]">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-primary to-accent flex items-center justify-center mb-2 transition-transform duration-300 group-hover:scale-110">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors min-h-12 line-clamp-2">
-                    {service.title}
-                  </h4>
-                  
-                  <p className="text-gray-600 leading-relaxed text-sm flex-1 line-clamp-4">
-                    {service.description}
-                  </p>
+            {SERVICES.map((column) => (
+              <div key={column.key} className="flex flex-col gap-4">
+                {/* Category Header */}
+                <div className={`bg-gradient-to-r ${column.color} rounded-xl text-center min-h-16 flex items-center justify-center p-4`}>
+                  <h3 className="text-xl font-bold text-slate-950">{column.title}</h3>
                 </div>
-              ))
-            )}
+
+                {/* Cards */}
+                {column.items.map((service) => (
+                  <div key={service.key} className="group bg-white border border-gray-400/20 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer h-full flex flex-col min-h-[220px]">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-primary to-accent flex items-center justify-center mb-2 transition-transform duration-300 group-hover:scale-110">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors min-h-12 line-clamp-2">
+                      {service.title}
+                    </h4>
+                    
+                    <p className="text-gray-600 leading-relaxed text-sm flex-1 line-clamp-4">
+                      {service.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
 
           {/* Additional Info */}
