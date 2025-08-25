@@ -25,19 +25,19 @@ export const HeroSection = () => {
             <div className="flex flex-col items-center p-6 bg-white/80 rounded-lg shadow-sm">
               <Heart className="w-12 h-12 text-accent mb-3" />
               <h3 className="text-lg font-semibold text-foreground mb-2">Atenção Personalizada</h3>
-              <p className="text-foreground/80 text-center">Cuidado individualizado com foco nas necessidades específicas de cada residente</p>
+              <p className="text-foreground/80 text-center">Cuidado com foco nas necessidades específicas de cada residente</p>
             </div>
             
             <div className="flex flex-col items-center p-6 bg-white/80 rounded-lg shadow-sm">
               <Stethoscope className="w-12 h-12 text-accent mb-3" />
               <h3 className="text-lg font-semibold text-foreground mb-2">Expertise Geriátrica</h3>
-              <p className="text-foreground/80 text-center">Equipe especializada em gerontologia com mais de uma década de experiência</p>
+              <p className="text-foreground/80 text-center">Equipe especializada em gerontologia com mais de 15 anos de experiência</p>
             </div>
             
             <div className="flex flex-col items-center p-6 bg-white/80 rounded-lg shadow-sm">
               <Users className="w-12 h-12 text-accent mb-3" />
               <h3 className="text-lg font-semibold text-foreground mb-2">Ambiente Familiar</h3>
-              <p className="text-foreground/80 text-center">Um lar acolhedor onde residentes se sentem parte da família Santa Ana</p>
+              <p className="text-foreground/80 text-center">Um lar acolhedor onde o idoso se sentem parte da família  Santa Ana</p>
             </div>
           </div>
 
