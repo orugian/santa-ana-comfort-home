@@ -20,9 +20,7 @@ export const HeroSection = () => {
           </h1>
           
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-foreground mb-8 animate-fade-in">
-            Há mais de 10 anos, oferecendo conforto, segurança e atenção personalizada aos nossos residentes.
-          </p>
+          <p className="text-xl md:text-2xl text-foreground mb-8 animate-fade-in text-center font-medium">Há mais de 15 anos cuidando do idoso com conforto, segurança e atenção personalizada</p>
 
           {/* Core Values */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 animate-fade-in">
