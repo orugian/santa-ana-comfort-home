@@ -17,7 +17,7 @@ export const AboutSection = () => {
 
             <div className="bg-accent-light p-8 rounded-lg shadow-sm">
               <h3 className="text-2xl font-semibold text-foreground mb-4 text-center">Visão</h3>
-              <p className="text-foreground/80 leading-relaxed text-left">Ser reconhecido como uma instituição em São Paulo e no Brasil no cuidado humanizado ao idoso, evidenciando que é possivel oferecer atendimento técnico de alto nível em um ambiente familiar, onde cada </p>
+              <p className="text-foreground/80 leading-relaxed text-left">Ser reconhecido como uma instituição em São Paulo e no Brasil no cuidado humanizado ao idoso, evidenciando que é possivel oferecer atendimento técnico de alto nível em um ambiente familiar, onde cada idoso se sente valorizado, amado e respeitado.</p>
             </div>
 
             <div className="bg-accent-light p-8 rounded-lg shadow-sm">
