@@ -33,11 +33,18 @@ export const Header = ({ activeSection }: HeaderProps) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src="/lar-santa-ana-logo.png" 
-              alt="Lar Santa Ana logo" 
-              className="h-12 w-auto"
-            />
+            <a href="/" className="flex items-center gap-2" aria-label="Lar Santa Ana — Início">
+              <img
+                src="/brand/lar-santa-ana-logo.png"
+                onError={(e) => { e.currentTarget.src = "/brand/lar-santa-ana-logo.jpg"; }}
+                alt="Lar Santa Ana logo"
+                className="site-logo block"
+                width={160}
+                height={48}
+                loading="eager"
+                decoding="async"
+              />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
