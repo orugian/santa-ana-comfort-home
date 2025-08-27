@@ -4,35 +4,84 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 export const ContactAndLocationSection = () => {
   const [mapLoaded, setMapLoaded] = useState(false);
-  const contactInfo = [{
-    icon: Phone,
-    title: "Telefone",
-    content: "(11) 9-9999-9999",
-    subtitle: "Atendimento das 8h às 18h"
-  }, {
-    icon: MessageCircle,
-    title: "WhatsApp",
-    content: "(11) 9-9999-9999",
-    subtitle: "Resposta rápida 24h"
-  }, {
-    icon: Mail,
-    title: "Email",
-    content: "contato@larsantaana.com.br",
-    subtitle: "Resposta em até 24h"
-  }, {
-    icon: MapPin,
-    title: "Endereço",
-    content: "R. Santa Gertrudes, 59\nVila Gomes Cardim, São Paulo – SP\nCEP: 03408-020",
-    subtitle: ""
-  }, {
-    icon: Clock,
-    title: "Horário de Visitas",
-    content: "Segunda a Sexta: 9h às 17h\nSábados: 9h às 15h\nDomingos: Mediante agendamento",
-    subtitle: ""
-  }];
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: "Telefone",
+      type: "phone",
+      items: [
+        {
+          content: "(11) 2537-2024",
+          link: "tel:+551125372024",
+          subtitle: "Atendimento das 9h às 18h"
+        }
+      ]
+    },
+    {
+      icon: MessageCircle,
+      title: "WhatsApp", 
+      type: "whatsapp",
+      items: [
+        {
+          content: "Cel: (11) 96024-3030",
+          link: `https://wa.me/5511960243030?text=${encodeURIComponent('Olá! Vim do site Lar Santa Ana e preciso de informações.')}`,
+          subtitle: "Resposta rápida 24h"
+        },
+        {
+          content: "Cel: (11) 96139-1788", 
+          link: `https://wa.me/5511961391788?text=${encodeURIComponent('Olá! Vim do site Lar Santa Ana e preciso de informações.')}`,
+          subtitle: "Resposta rápida 24h"
+        },
+        {
+          content: "Cel: (11) 98081-7690",
+          link: `https://wa.me/5511980817690?text=${encodeURIComponent('Olá! Vim do site Lar Santa Ana e preciso de informações.')}`,
+          subtitle: "Resposta rápida 24h"
+        }
+      ]
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      type: "email", 
+      items: [
+        {
+          content: "dani.chimbata@outlook.com",
+          link: "mailto:dani.chimbata@outlook.com",
+          subtitle: "Resposta em até 24h"
+        },
+        {
+          content: "fabi.gomes.fisio@gmail.com",
+          link: "mailto:fabi.gomes.fisio@gmail.com", 
+          subtitle: "Resposta em até 24h"
+        }
+      ]
+    },
+    {
+      icon: MapPin,
+      title: "Endereço",
+      type: "address",
+      items: [
+        {
+          content: "R. Santa Gertrudes, 59\nVila Gomes Cardim, São Paulo – SP\nCEP: 03408-020",
+          subtitle: ""
+        }
+      ]
+    },
+    {
+      icon: Clock,
+      title: "Horário de Visitas", 
+      type: "hours",
+      items: [
+        {
+          content: "Visita Livre — Sem restrição de dia e horário",
+          subtitle: ""
+        }
+      ]
+    }
+  ];
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Olá! Gostaria de saber mais sobre o Lar Santa Ana.");
-    window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5511960243030?text=${message}`, '_blank');
   };
   const handleGoogleMapsClick = () => {
     const address = encodeURIComponent("R. Santa Gertrudes, 59 - Vila Gomes Cardim, São Paulo - SP, 03408-020, Brasil");
@@ -69,24 +118,50 @@ export const ContactAndLocationSection = () => {
               
               <div className="space-y-4">
                 {contactInfo.map((item, index) => {
-                const IconComponent = item.icon;
-                return <div key={index} className="flex items-start space-x-4">
+                  const IconComponent = item.icon;
+                  return (
+                    <div key={index} className="flex items-start space-x-4">
                       <div className="flex-shrink-0 p-2">
                         <IconComponent className="w-5 h-5 text-[#9DDDC1]" strokeWidth={2} aria-hidden="true" />
                       </div>
-                      <div className="flex-grow min-w-0">
+                      <div className="flex-grow min-w-0 space-y-2">
                         <h4 className="font-semibold text-sm text-slate-950">
                           {item.title}
                         </h4>
-                        <p className="text-[#6B7280] text-sm leading-relaxed whitespace-pre-line">
-                          {item.content}
-                        </p>
-                        {item.subtitle && <p className="text-[#6B7280] text-xs mt-1 opacity-75">
-                            {item.subtitle}
-                          </p>}
+                        {item.items.map((contactItem, itemIndex) => (
+                          <div key={itemIndex} className="space-y-1">
+                            {contactItem.link ? (
+                              <a
+                                href={contactItem.link}
+                                target={item.type === 'whatsapp' ? '_blank' : undefined}
+                                rel={item.type === 'whatsapp' ? 'noopener noreferrer' : undefined}
+                                className="text-[#6B7280] text-sm leading-relaxed whitespace-pre-line hover:text-[#9DDDC1] transition-colors"
+                                aria-label={
+                                  item.type === 'whatsapp' 
+                                    ? `Abrir conversa no WhatsApp para ${contactItem.content.replace('Cel: ', '')}`
+                                    : item.type === 'phone'
+                                    ? `Ligar para ${contactItem.content}`
+                                    : `Enviar email para ${contactItem.content}`
+                                }
+                              >
+                                {contactItem.content}
+                              </a>
+                            ) : (
+                              <p className="text-[#6B7280] text-sm leading-relaxed whitespace-pre-line">
+                                {contactItem.content}
+                              </p>
+                            )}
+                            {contactItem.subtitle && (
+                              <p className="text-[#6B7280] text-xs opacity-75">
+                                {contactItem.subtitle}
+                              </p>
+                            )}
+                          </div>
+                        ))}
                       </div>
-                    </div>;
-              })}
+                    </div>
+                  );
+                })}
               </div>
             </Card>
           </div>

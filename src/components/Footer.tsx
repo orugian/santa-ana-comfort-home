@@ -82,13 +82,14 @@ export const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary" />
-                <span className="text-foreground/80">(11) 2537-2024
-(11)</span>
+                <span className="text-foreground/80">(11) 2537-2024</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary" />
-                <span className="text-foreground/80">dani.chimbata@outlook.com
-fabi.gomes.fisio@gmail.com</span>
+                <div className="text-foreground/80">
+                  <p>dani.chimbata@outlook.com</p>
+                  <p>fabi.gomes.fisio@gmail.com</p>
+                </div>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary mt-1" />
