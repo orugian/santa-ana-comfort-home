@@ -2,6 +2,7 @@ import { useState } from "react";
 import { MapPin, Phone, Mail, MessageCircle, Clock, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { openWhatsApp, buildWhatsAppUrl } from "@/utils/whatsapp";
 export const ContactAndLocationSection = () => {
   const [mapLoaded, setMapLoaded] = useState(false);
   const contactInfo = [
@@ -117,51 +118,147 @@ export const ContactAndLocationSection = () => {
               </h3>
               
               <div className="space-y-4">
-                {contactInfo.map((item, index) => {
-                  const IconComponent = item.icon;
-                  return (
-                    <div key={index} className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 p-2">
-                        <IconComponent className="w-5 h-5 text-[#9DDDC1]" strokeWidth={2} aria-hidden="true" />
-                      </div>
-                      <div className="flex-grow min-w-0 space-y-2">
-                        <h4 className="font-semibold text-sm text-slate-950">
-                          {item.title}
-                        </h4>
-                        {item.items.map((contactItem, itemIndex) => (
-                          <div key={itemIndex} className="space-y-1">
-                            {contactItem.link ? (
-                              <a
-                                href={contactItem.link}
-                                target={item.type === 'whatsapp' ? '_blank' : undefined}
-                                rel={item.type === 'whatsapp' ? 'noopener noreferrer' : undefined}
-                                className="text-[#6B7280] text-sm leading-relaxed whitespace-pre-line hover:text-[#9DDDC1] transition-colors"
-                                aria-label={
-                                  item.type === 'whatsapp' 
-                                    ? `Abrir conversa no WhatsApp para ${contactItem.content.replace('Cel: ', '')}`
-                                    : item.type === 'phone'
-                                    ? `Ligar para ${contactItem.content}`
-                                    : `Enviar email para ${contactItem.content}`
-                                }
-                              >
-                                {contactItem.content}
-                              </a>
-                            ) : (
-                              <p className="text-[#6B7280] text-sm leading-relaxed whitespace-pre-line">
-                                {contactItem.content}
-                              </p>
-                            )}
-                            {contactItem.subtitle && (
-                              <p className="text-[#6B7280] text-xs opacity-75">
-                                {contactItem.subtitle}
-                              </p>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  );
-                })}
+                {/* Phone */}
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 p-2">
+                    <Phone className="w-5 h-5 text-[#9DDDC1]" strokeWidth={2} aria-hidden="true" />
+                  </div>
+                  <div className="flex-grow min-w-0 space-y-2">
+                    <h4 className="font-semibold text-sm text-slate-950">
+                      Telefone
+                    </h4>
+                    <a
+                      href="tel:+551125372024"
+                      className="text-[#6B7280] text-sm leading-relaxed hover:text-[#9DDDC1] transition-colors"
+                      aria-label="Ligar para (11) 2537-2024"
+                    >
+                      (11) 2537-2024
+                    </a>
+                    <p className="text-[#6B7280] text-xs opacity-75">
+                      Atendimento das 9h às 18h
+                    </p>
+                  </div>
+                </div>
+
+                {/* WhatsApp */}
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 p-2">
+                    <MessageCircle className="w-5 h-5 text-[#9DDDC1]" strokeWidth={2} aria-hidden="true" />
+                  </div>
+                  <div className="flex-grow min-w-0 space-y-2">
+                    <h4 className="font-semibold text-sm text-slate-950">
+                      WhatsApp
+                    </h4>
+                    <ul className="space-y-1.5">
+                      <li>
+                        <a
+                          href={buildWhatsAppUrl("(11) 96024-3030", "Olá! Vim do site Lar Santa Ana e preciso de informações.")}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => { e.preventDefault(); openWhatsApp("(11) 96024-3030", "Olá! Vim do site Lar Santa Ana e preciso de informações."); }}
+                          className="text-[#6B7280] text-sm leading-relaxed hover:text-[#9DDDC1] transition-colors"
+                          aria-label="Abrir conversa no WhatsApp para (11) 96024-3030"
+                        >
+                          Cel: (11) 96024-3030
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href={buildWhatsAppUrl("(11) 96139-1788", "Olá! Vim do site Lar Santa Ana e preciso de informações.")}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => { e.preventDefault(); openWhatsApp("(11) 96139-1788", "Olá! Vim do site Lar Santa Ana e preciso de informações."); }}
+                          className="text-[#6B7280] text-sm leading-relaxed hover:text-[#9DDDC1] transition-colors"
+                          aria-label="Abrir conversa no WhatsApp para (11) 96139-1788"
+                        >
+                          Cel: (11) 96139-1788
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href={buildWhatsAppUrl("(11) 98081-7690", "Olá! Vim do site Lar Santa Ana e preciso de informações.")}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => { e.preventDefault(); openWhatsApp("(11) 98081-7690", "Olá! Vim do site Lar Santa Ana e preciso de informações."); }}
+                          className="text-[#6B7280] text-sm leading-relaxed hover:text-[#9DDDC1] transition-colors"
+                          aria-label="Abrir conversa no WhatsApp para (11) 98081-7690"
+                        >
+                          Cel: (11) 98081-7690
+                        </a>
+                      </li>
+                    </ul>
+                    <p className="text-[#6B7280] text-xs opacity-75 mt-2">
+                      Resposta rápida 24h
+                    </p>
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 p-2">
+                    <Mail className="w-5 h-5 text-[#9DDDC1]" strokeWidth={2} aria-hidden="true" />
+                  </div>
+                  <div className="flex-grow min-w-0 space-y-2">
+                    <h4 className="font-semibold text-sm text-slate-950">
+                      Email
+                    </h4>
+                    <ul className="space-y-1.5">
+                      <li>
+                        <a
+                          href="mailto:dani.chimbata@outlook.com"
+                          className="text-[#6B7280] text-sm leading-relaxed hover:text-[#9DDDC1] transition-colors"
+                          aria-label="Enviar email para dani.chimbata@outlook.com"
+                        >
+                          dani.chimbata@outlook.com
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="mailto:fabi.gomes.fisio@gmail.com"
+                          className="text-[#6B7280] text-sm leading-relaxed hover:text-[#9DDDC1] transition-colors"
+                          aria-label="Enviar email para fabi.gomes.fisio@gmail.com"
+                        >
+                          fabi.gomes.fisio@gmail.com
+                        </a>
+                      </li>
+                    </ul>
+                    <p className="text-[#6B7280] text-xs opacity-75 mt-2">
+                      Resposta em até 24h
+                    </p>
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 p-2">
+                    <MapPin className="w-5 h-5 text-[#9DDDC1]" strokeWidth={2} aria-hidden="true" />
+                  </div>
+                  <div className="flex-grow min-w-0 space-y-2">
+                    <h4 className="font-semibold text-sm text-slate-950">
+                      Endereço
+                    </h4>
+                    <p className="text-[#6B7280] text-sm leading-relaxed whitespace-pre-line">
+                      R. Santa Gertrudes, 59
+Vila Gomes Cardim, São Paulo – SP
+CEP: 03408-020
+                    </p>
+                  </div>
+                </div>
+
+                {/* Visiting Hours */}
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 p-2">
+                    <Clock className="w-5 h-5 text-[#9DDDC1]" strokeWidth={2} aria-hidden="true" />
+                  </div>
+                  <div className="flex-grow min-w-0 space-y-2">
+                    <h4 className="font-semibold text-sm text-slate-950">
+                      Horário de Visitas
+                    </h4>
+                    <p className="text-[#6B7280] text-sm leading-relaxed">
+                      Visita Livre — Sem restrição de dia e horário
+                    </p>
+                  </div>
+                </div>
               </div>
             </Card>
           </div>
