@@ -76,7 +76,7 @@ export const EventsSection = () => {
           {/* Event Philosophy */}
           <div className="bg-white rounded-lg shadow-sm p-8">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-semibold text-primary mb-4">Nossa Filosofia de Celebração</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-slate-950">Nossa Filosofia de Celebração</h3>
               <p className="text-foreground/80 max-w-4xl mx-auto leading-relaxed">
                 Acreditamos que celebrar é fundamental para manter o espírito jovem e alegre. 
                 Nossos eventos são planejados com carinho para proporcionar momentos de felicidade, 

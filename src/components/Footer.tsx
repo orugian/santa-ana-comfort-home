@@ -36,7 +36,7 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-slate-950">Navegação</h4>
             <ul className="space-y-2">
               <li>
-                <button onClick={() => scrollToSection("home")} className="transition-colors text-zinc-600">
+                <button onClick={() => scrollToSection("home")} className="transition-colors text-inherit">
                   Início
                 </button>
               </li>
@@ -82,18 +82,20 @@ export const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary" />
-                <span className="text-foreground/80">(11) 9-9999-9999</span>
+                <span className="text-foreground/80">(11) 2537-2024
+(11)</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary" />
-                <span className="text-foreground/80">contato@larsantaana.com.br</span>
+                <span className="text-foreground/80">dani.chimbata@outlook.com
+fabi.gomes.fisio@gmail.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary mt-1" />
                 <div className="text-foreground/80">
-                  <p>Rua das Flores, 123</p>
+                  <p>Rua Santa Gertrudes, 59</p>
                   <p>Tatuapé - São Paulo/SP</p>
-                  <p>CEP: 03010-000</p>
+                  <p>CEP: 03408-020</p>
                 </div>
               </div>
             </div>
