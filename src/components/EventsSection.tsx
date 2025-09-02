@@ -3,6 +3,15 @@ import { Gift, Heart, Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 const FEATURED_EVENTS = [
   {
+    key: "atividades-externas",
+    title: "Atividades ao Ar Livre",
+    description:
+      "Momentos de convivência e atividades recreativas em nosso espaço externo.",
+    imageSrc: "/lovable-uploads/7cfe7575-31ab-4c49-8a2b-e57e48d42b4d.png",
+    imageAlt: "Residentes participando de atividades ao ar livre",
+    icon: "heart"
+  },
+  {
     key: "festa-junina",
     title: "Festa Junina",
     description:
