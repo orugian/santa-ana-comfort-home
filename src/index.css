@@ -13,15 +13,14 @@
 
 /* Logo rendering */
 .site-logo {
-  display: block;
-  max-height: 48px;
+  max-height: 48px;       /* desktop cap */
   width: auto;
   object-fit: contain;
   image-rendering: -webkit-optimize-contrast;
 }
 
 @media (max-width: 768px) {
-  .site-logo { max-height: 36px; }
+  .site-logo { max-height: 40px; } /* mobile cap ≈ h-10 */
 }
 
 /* WhatsApp Floating Action Button — VISUALS ONLY */

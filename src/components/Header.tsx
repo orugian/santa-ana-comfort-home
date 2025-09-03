@@ -36,9 +36,9 @@ export const Header = ({ activeSection }: HeaderProps) => {
             <a href="/" className="header-brand" aria-label="Lar Santa Ana — Início">
               <img
                 src="/brand/lar-santa-ana-logo.png"
-                onError={(e) => { e.currentTarget.src = "/brand/lar-santa-ana-logo.jpg"; }}
+                onError={(e) => { (e.currentTarget as HTMLImageElement).src = "/brand/lar-santa-ana-logo.jpg"; }}
                 alt="Lar Santa Ana logo"
-                className="site-logo"
+                className="site-logo h-10 md:h-12 w-auto object-contain block shrink-0"
                 width={168}
                 height={48}
                 loading="eager"
