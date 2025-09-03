@@ -31,18 +31,21 @@ export const Header = ({ activeSection }: HeaderProps) => {
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Brand / Logo */}
           <div className="flex items-center">
-            <a href="/" className="header-brand" aria-label="Lar Santa Ana — Início">
+            <a href="/" aria-label="Lar Santa Ana — Início" className="inline-flex items-center shrink-0">
               <img
-                src="/brand/lar-santa-ana-logo.png"
-                onError={(e) => { (e.currentTarget as HTMLImageElement).src = "/brand/lar-santa-ana-logo.jpg"; }}
+                src="/brand/lar-santa-ana-logo.jpg"
                 alt="Lar Santa Ana logo"
-                className="site-logo h-10 md:h-12 w-auto object-contain block shrink-0"
+                className="h-10 md:h-12 w-auto object-contain block"
                 width={168}
                 height={48}
                 loading="eager"
                 decoding="async"
+                onError={(e) => {
+                  // graceful fallback if we later add the PNG
+                  (e.currentTarget as HTMLImageElement).src = "/brand/lar-santa-ana-logo.png";
+                }}
               />
             </a>
           </div>
