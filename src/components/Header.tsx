@@ -31,19 +31,17 @@ export const Header = ({ activeSection }: HeaderProps) => {
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Brand / Logo */}
+          {/* Brand / Logo — NOT clickable */}
           <div className="flex items-center">
-            <a href="/" aria-label="Lar Santa Ana — Início" className="inline-flex items-center shrink-0">
-              <img
-                src="/brand/lar-santa-ana-logo.png"
-                alt="Lar Santa Ana logo"
-                className="h-11 md:h-14 w-auto object-contain block"
-                width={168}
-                height={56}
-                loading="eager"
-                decoding="async"
-              />
-            </a>
+            <img
+              src="/brand/lar-santa-ana-logo.png"
+              alt="Lar Santa Ana"
+              className="block h-11 md:h-14 w-auto object-contain select-none"
+              width={224}
+              height={72}
+              loading="eager"
+              decoding="async"
+            />
           </div>
 
           {/* Desktop Navigation */}
