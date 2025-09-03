@@ -35,17 +35,13 @@ export const Header = ({ activeSection }: HeaderProps) => {
           <div className="flex items-center">
             <a href="/" aria-label="Lar Santa Ana — Início" className="inline-flex items-center shrink-0">
               <img
-                src="/brand/lar-santa-ana-logo.jpg"
+                src="/brand/lar-santa-ana-logo.png"
                 alt="Lar Santa Ana logo"
-                className="h-10 md:h-12 w-auto object-contain block"
+                className="h-11 md:h-14 w-auto object-contain block"
                 width={168}
-                height={48}
+                height={56}
                 loading="eager"
                 decoding="async"
-                onError={(e) => {
-                  // Optional graceful fallback if JPG is missing and a PNG exists
-                  (e.currentTarget as HTMLImageElement).src = "/brand/lar-santa-ana-logo.png";
-                }}
               />
             </a>
           </div>
