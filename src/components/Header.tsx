@@ -43,7 +43,7 @@ export const Header = ({ activeSection }: HeaderProps) => {
                 loading="eager"
                 decoding="async"
                 onError={(e) => {
-                  // graceful fallback if we later add the PNG
+                  // Optional graceful fallback if JPG is missing and a PNG exists
                   (e.currentTarget as HTMLImageElement).src = "/brand/lar-santa-ana-logo.png";
                 }}
               />
