@@ -34,7 +34,7 @@ export const Header = ({ activeSection }: HeaderProps) => {
           {/* Brand / Logo */}
           <div className="flex items-center shrink-0">
             <img
-              src="/brand/lar-santa-ana-logo.png"
+              src="/brand/lar-santa-ana-logo.png.png"
               alt="Lar Santa Ana"
               width={168}
               height={48}
