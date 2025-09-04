@@ -33,15 +33,24 @@ export const Header = ({ activeSection }: HeaderProps) => {
         <div className="flex items-center justify-between h-16">
           {/* Brand / Logo */}
           <div className="flex items-center shrink-0">
-            <img
-              src="/brand/lar-santa-ana-logo.png.png"
-              alt="Lar Santa Ana"
-              width={168}
-              height={48}
-              className="block h-11 md:h-14 w-auto object-contain select-none"
-              loading="eager"
-              decoding="async"
-            />
+            <a
+              href="#home"
+              onClick={(e) => {
+                e.preventDefault();
+                // keep using the existing helper to scroll smoothly
+                scrollToSection('home');
+              }}
+              aria-label="Go to top"
+              className="inline-flex items-center h-11 md:h-14 px-1 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+            >
+              <img
+                src="/brand/lar-santa-ana-logo.png"
+                alt="Lar Santa Ana"
+                className="h-8 md:h-10 w-auto object-contain select-none block"
+                loading="eager"
+                decoding="async"
+              />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
