@@ -34,11 +34,9 @@ export const Header = ({ activeSection }: HeaderProps) => {
           {/* Brand / Logo */}
           <div className="flex items-center shrink-0">
             <img
-              src="/brand/lar-santa-ana-logo.png.png"
+              src="/brand/lar-santa-ana-logo.png"
               alt="Lar Santa Ana"
-              width={168}
-              height={48}
-              className="block h-11 md:h-14 w-auto object-contain select-none"
+              className="block h-9 md:h-12 w-auto object-contain select-none drop-shadow-sm transition-opacity duration-150 hover:opacity-100"
               loading="eager"
               decoding="async"
             />
