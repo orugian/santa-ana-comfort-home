@@ -150,18 +150,15 @@ export const EventsSection = () => {
         <div className="mb-16">
           <div className="rounded-2xl bg-white/60 backdrop-blur-[1px] p-2">
             <div className="grid grid-cols-12 gap-6">
-              {/* Image */}
+              {/* Featured Event image (left) */}
               <div className="col-span-12 lg:col-span-6">
-                <div className="relative w-full overflow-hidden rounded-xl shadow-sm aspect-[16/9] md:aspect-[5/3] lg:aspect-[2/1]">
+                <div className="relative w-full rounded-2xl overflow-hidden shadow-md bg-muted/20 aspect-[16/9] md:aspect-[21/9]">
                   <img
-                    src={currentEvent.imageSrc}
-                    alt={currentEvent.imageAlt}
-                    className="absolute inset-0 h-full w-full object-cover object-center select-none"
+                    src="/lovable-uploads/d4e59df8-9654-4922-834d-14722b247025.png"
+                    alt="Moradoras no jardim durante momento de lazer no Lar Santa Ana"
+                    className="absolute inset-0 h-full w-full object-cover"
                     loading="lazy"
                     decoding="async"
-                    width={1600}
-                    height={900}
-                    sizes="(min-width:1024px) 720px, (min-width:768px) 640px, 100vw"
                   />
                 </div>
               </div>
