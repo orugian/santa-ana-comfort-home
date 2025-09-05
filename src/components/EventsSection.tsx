@@ -173,8 +173,8 @@ export const EventsSection = () => {
               {/* Content */}
               <div className="col-span-12 lg:col-span-6 rounded-2xl p-6 md:p-8 bg-gradient-to-br from-[#F7F7FF] to-[#F7FBFF] border border-black/5 shadow-sm flex flex-col gap-4">
                 {/* Icon Badge */}
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-[#FDBA74] to-[#FEF3C7]">
-                  <IconComponent className="w-6 h-6 text-orange-600" />
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary shadow-[inset_0_0_0_1px_rgba(37,99,235,0.12)]">
+                  <IconComponent className="w-6 h-6" aria-hidden="true" />
                 </div>
 
                 {/* Title */}
