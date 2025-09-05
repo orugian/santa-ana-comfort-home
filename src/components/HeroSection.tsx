@@ -26,37 +26,37 @@ export const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-white/92 via-white/78 to-white/50 md:from-white/85 md:via-white/70 md:to-white/45" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10 md:pt-28 md:pb-12">
+        {/* Content panel – wraps H1 + paragraph only */}
+        <div className="mx-auto max-w-3xl text-center rounded-2xl bg-white/70 md:bg-white/55 backdrop-blur-md ring-1 ring-white/60 shadow-sm px-6 py-5 md:px-8 md:py-6 mb-8 md:mb-10">
           {/* Main Heading */}
           <h1 className="text-4xl mb-6 animate-fade-in text-slate-950 font-bold md:text-6xl">
             Residencial para Idosos
           </h1>
           
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-foreground mb-8 animate-fade-in text-center font-medium">Há mais de 15 anos cuidando do idoso com conforto, segurança e atenção personalizada</p>
+          <p className="text-xl md:text-2xl text-slate-700 animate-fade-in text-center font-medium">Há mais de 15 anos cuidando do idoso com conforto, segurança e atenção personalizada</p>
+        </div>
 
-          {/* Core Values */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 animate-fade-in">
-            <div className="flex flex-col items-center p-6 bg-white/80 rounded-lg shadow-sm">
-              <Heart className="w-12 h-12 text-accent mb-3" />
-              <h3 className="text-lg font-semibold text-foreground mb-2">Atenção Personalizada</h3>
-              <p className="text-foreground/80 text-center">Cuidado com foco nas necessidades específicas de cada residente</p>
-            </div>
-            
-            <div className="flex flex-col items-center p-6 bg-white/80 rounded-lg shadow-sm">
-              <Stethoscope className="w-12 h-12 text-accent mb-3" />
-              <h3 className="text-lg font-semibold text-foreground mb-2">Expertise Geriátrica</h3>
-              <p className="text-foreground/80 text-center">Equipe especializada em gerontologia com mais de 15 anos de experiência</p>
-            </div>
-            
-            <div className="flex flex-col items-center p-6 bg-white/80 rounded-lg shadow-sm">
-              <Users className="w-12 h-12 text-accent mb-3" />
-              <h3 className="text-lg font-semibold text-foreground mb-2">Ambiente Familiar</h3>
-              <p className="text-foreground/80 text-center">Um lar acolhedor onde o idoso se sentem parte da família  Santa Ana</p>
-            </div>
+        {/* Core Values */}
+        <div className="mt-8 md:mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6 animate-fade-in">
+          <div className="flex flex-col items-center rounded-2xl bg-white/90 md:bg-white/80 backdrop-blur-md ring-1 ring-black/5 shadow-md hover:shadow-lg transition-shadow p-4 md:p-6">
+            <Heart className="w-12 h-12 text-primary mb-3" />
+            <h3 className="text-lg font-semibold text-foreground mb-2">Atenção Personalizada</h3>
+            <p className="text-slate-700 text-center">Cuidado com foco nas necessidades específicas de cada residente</p>
           </div>
-
+          
+          <div className="flex flex-col items-center rounded-2xl bg-white/90 md:bg-white/80 backdrop-blur-md ring-1 ring-black/5 shadow-md hover:shadow-lg transition-shadow p-4 md:p-6">
+            <Stethoscope className="w-12 h-12 text-primary mb-3" />
+            <h3 className="text-lg font-semibold text-foreground mb-2">Expertise Geriátrica</h3>
+            <p className="text-slate-700 text-center">Equipe especializada em gerontologia com mais de 15 anos de experiência</p>
+          </div>
+          
+          <div className="flex flex-col items-center rounded-2xl bg-white/90 md:bg-white/80 backdrop-blur-md ring-1 ring-black/5 shadow-md hover:shadow-lg transition-shadow p-4 md:p-6">
+            <Users className="w-12 h-12 text-primary mb-3" />
+            <h3 className="text-lg font-semibold text-foreground mb-2">Ambiente Familiar</h3>
+            <p className="text-slate-700 text-center">Um lar acolhedor onde o idoso se sentem parte da família  Santa Ana</p>
+          </div>
         </div>
       </div>
       
