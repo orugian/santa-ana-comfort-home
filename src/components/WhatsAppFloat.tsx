@@ -2,7 +2,7 @@
 import React from "react";
 
 export const WhatsAppFloat: React.FC = () => {
-  const phone = "5511980817690"; // +55 11 98081-7690
+  const phone = "551160243030"; // +55 11 6024-3030
   const href = `https://wa.me/${phone}`;
 
   return (

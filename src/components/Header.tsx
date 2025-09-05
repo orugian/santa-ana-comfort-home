@@ -63,9 +63,16 @@ export const Header = ({ activeSection }: HeaderProps) => {
 
           {/* Contact Buttons */}
           <div className="hidden lg:flex items-center space-x-2">
-            <Button size="sm" variant="whatsapp">
-              <MessageCircle className="w-4 h-4 mr-1" />
-              WhatsApp
+            <Button size="sm" variant="whatsapp" asChild>
+              <a
+                href="https://wa.me/551160243030?text=Ol%C3%A1%2C%20vim%20do%20site%20Lar%20Santa%20Ana%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir chat no WhatsApp"
+              >
+                <MessageCircle className="w-4 h-4 mr-1" />
+                WhatsApp
+              </a>
             </Button>
           </div>
 
@@ -99,9 +106,16 @@ export const Header = ({ activeSection }: HeaderProps) => {
                 </button>
               ))}
               <div className="flex flex-col space-y-2 pt-3 border-t border-gray-100">
-                <Button size="sm" variant="whatsapp" className="justify-start">
-                  <MessageCircle className="w-4 h-4 mr-2" />
-                  WhatsApp
+                <Button size="sm" variant="whatsapp" className="justify-start" asChild>
+                  <a
+                    href="https://wa.me/551160243030?text=Ol%C3%A1%2C%20vim%20do%20site%20Lar%20Santa%20Ana%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Abrir chat no WhatsApp"
+                  >
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    WhatsApp
+                  </a>
                 </Button>
               </div>
             </nav>
