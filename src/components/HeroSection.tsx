@@ -24,19 +24,25 @@ export const HeroSection = () => {
         />
         {/* Soft white scrim for readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-white/92 via-white/78 to-white/50 md:from-white/85 md:via-white/70 md:to-white/45" />
+        {/* Gentle top gradient for enhanced contrast */}
+        <div aria-hidden className="absolute inset-0 -z-0 bg-gradient-to-b from-white/50 via-white/30 to-transparent"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-28">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Content panel for heading and subheading */}
-          <div className="mx-auto max-w-3xl text-center rounded-2xl bg-white/70 md:bg-white/55 backdrop-blur-md ring-1 ring-white/60 shadow-sm px-6 py-5 md:px-8 md:py-6 mb-8 md:mb-10">
-            {/* Main Heading */}
-            <h1 className="text-4xl mb-6 animate-fade-in text-slate-950 font-bold md:text-6xl">
+          {/* New refined heading block */}
+          <div className="mx-auto max-w-4xl text-center">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 drop-shadow-[0_1px_0_rgba(255,255,255,0.6)]">
               Residencial para Idosos
             </h1>
-            
-            {/* Subtitle */}
-            <p className="text-xl md:text-2xl text-foreground mb-0 animate-fade-in text-center font-medium">Há mais de 15 anos cuidando do idoso com conforto, segurança e atenção personalizada</p>
+
+            {/* Brand accent underline */}
+            <div className="mx-auto mt-3 h-1.5 w-24 rounded-full bg-gradient-to-r from-primary via-emerald-400 to-primary opacity-90"></div>
+
+            {/* Subheading as a soft "glass chip" for contrast */}
+            <p className="mt-5 mx-auto max-w-3xl text-base md:text-lg leading-relaxed text-slate-800/90 bg-white/60 md:bg-white/50 backdrop-blur-md rounded-xl px-4 py-2 ring-1 ring-white/60 shadow-sm">
+              Há mais de 15 anos cuidando do idoso com conforto, segurança e atenção personalizada
+            </p>
           </div>
 
           {/* Core Values */}
