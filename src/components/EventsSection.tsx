@@ -25,8 +25,8 @@ const FEATURED_EVENTS = [
     title: "Aniversários",
     description:
       "Comemorações mensais com bolo, música e muita alegria.",
-    imageSrc: "/images/eventos/aniversarios.jpg",
-    imageAlt: "Celebração de aniversário dos residentes",
+    imageSrc: "/lovable-uploads/829a5ff3-6346-4a44-87a5-16db902eef9e.png",
+    imageAlt: "Aniversário — moradora celebrando com bolo e decoração",
     icon: "gift"
   },
   {
@@ -152,16 +152,14 @@ export const EventsSection = () => {
             <div className="grid grid-cols-12 gap-6">
               {/* Image */}
               <div className="col-span-12 lg:col-span-6">
-                <div className="relative w-full overflow-hidden rounded-xl shadow-sm aspect-[16/9] md:aspect-[5/3] lg:aspect-[2/1]">
+                <div className="relative rounded-2xl overflow-hidden h-56 md:h-64 lg:h-72 bg-muted/20">
                   <img
                     src={currentEvent.imageSrc}
                     alt={currentEvent.imageAlt}
-                    className="absolute inset-0 h-full w-full object-cover object-center select-none"
+                    className="absolute inset-0 w-full h-full object-cover object-[center_28%] md:object-[center_32%] select-none pointer-events-none"
                     loading="lazy"
                     decoding="async"
-                    width={1600}
-                    height={900}
-                    sizes="(min-width:1024px) 720px, (min-width:768px) 640px, 100vw"
+                    draggable={false}
                   />
                 </div>
               </div>
