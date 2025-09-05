@@ -34,8 +34,8 @@ const FEATURED_EVENTS = [
     title: "Celebração de Páscoa",
     description:
       "Reunião especial com almoço festivo e atividades temáticas.",
-    imageSrc: "/images/eventos/pascoa.jpg",
-    imageAlt: "Decoração de Páscoa no salão",
+    imageSrc: "/lovable-uploads/048ee364-a008-422d-9478-820302894534.png",
+    imageAlt: "Celebração de Páscoa com residentes no jardim",
     icon: "heart"
   },
   {
@@ -152,14 +152,14 @@ export const EventsSection = () => {
             <div className="grid grid-cols-12 gap-6">
               {/* Image */}
               <div className="col-span-12 lg:col-span-6">
-                <div className="relative rounded-2xl overflow-hidden h-56 md:h-64 lg:h-72 bg-muted/20">
+                <div className="relative rounded-2xl overflow-hidden bg-muted/20">
                   <img
                     src={currentEvent.imageSrc}
                     alt={currentEvent.imageAlt}
-                    className="absolute inset-0 w-full h-full object-cover object-[center_28%] md:object-[center_32%] select-none pointer-events-none"
-                    loading="lazy"
+                    className="w-full h-[220px] sm:h-[260px] md:h-[300px] lg:h-[340px] xl:h-[380px] rounded-xl object-cover"
+                    style={currentEvent.title === "Celebração de Páscoa" ? { objectPosition: "50% 40%" } : undefined}
+                    loading="eager"
                     decoding="async"
-                    draggable={false}
                   />
                 </div>
               </div>
