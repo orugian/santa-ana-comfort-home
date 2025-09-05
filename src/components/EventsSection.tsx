@@ -93,18 +93,18 @@ const getIcon = (iconName: string) => {
   }
 };
 
-const getBadgeColors = (key: string) => {
+const getBadgeStyles = (key: string) => {
   switch (key) {
     case "aniversario":
-      return "from-[#FDE68A] to-[#FEF9C3]";
+      return "bg-primary/10 text-primary shadow-[inset_0_0_0_1px_rgba(37,99,235,0.12)]";
     case "pascoa":
-      return "from-[#FCD34D] to-[#FFEDD5]";
+      return "bg-[#9DDDC1]/30 text-primary shadow-[inset_0_0_0_1px_rgba(157,221,193,0.38)]";
     case "junina":
-      return "from-[#FDBA74] to-[#FFE4D6]";
+      return "bg-primary/10 text-primary shadow-[inset_0_0_0_1px_rgba(37,99,235,0.12)]";
     case "natal":
-      return "from-[#FCA5A5] to-[#FEE2E2]";
+      return "bg-[#9DDDC1]/30 text-primary shadow-[inset_0_0_0_1px_rgba(157,221,193,0.38)]";
     default:
-      return "from-[#FDBA74] to-[#FEF3C7]";
+      return "bg-primary/10 text-primary shadow-[inset_0_0_0_1px_rgba(37,99,235,0.12)]";
   }
 };
 
@@ -225,13 +225,13 @@ export const EventsSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {CELEBRATION_TYPES.map((celebration) => {
               const IconComponent = getIcon(celebration.icon);
-              const badgeColors = getBadgeColors(celebration.key);
+              const badgeStyles = getBadgeStyles(celebration.key);
               
               return (
                 <div key={celebration.key} className="bg-white rounded-2xl border border-black/5 shadow-xs p-5 flex flex-col h-full">
                   {/* Icon Badge */}
-                  <div className={`inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br ${badgeColors} mb-4`}>
-                    <IconComponent className="w-5 h-5 text-orange-600" />
+                  <div className={`flex items-center justify-center w-10 h-10 rounded-xl mb-4 ${badgeStyles}`}>
+                    <IconComponent className="w-5 h-5" aria-hidden="true" />
                   </div>
 
                   {/* Title */}
