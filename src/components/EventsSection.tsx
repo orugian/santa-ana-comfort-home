@@ -16,7 +16,7 @@ const FEATURED_EVENTS = [
     title: "Festa Junina",
     description:
       "Celebração tradicional com comidas típicas, decoração festiva e apresentações.",
-    imageSrc: "/images/eventos/festa-junina.jpg",
+    imageSrc: "/lovable-uploads/ff0e6325-70d8-40fb-8bae-ef672adad5b0.png",
     imageAlt: "Residentes reunidos na Festa Junina",
     icon: "star"
   },
@@ -152,12 +152,16 @@ export const EventsSection = () => {
             <div className="grid grid-cols-12 gap-6">
               {/* Image */}
               <div className="col-span-12 lg:col-span-6">
-                <div className="rounded-2xl overflow-hidden aspect-[16/9]">
-                  <img 
+                <div className="relative w-full overflow-hidden rounded-xl shadow-sm aspect-[16/9] md:aspect-[5/3] lg:aspect-[2/1]">
+                  <img
                     src={currentEvent.imageSrc}
-                    onError={(e) => { e.currentTarget.src = "/images/placeholder-16x9.jpg"; }}
                     alt={currentEvent.imageAlt}
-                    className="w-full h-full object-cover"
+                    className="absolute inset-0 h-full w-full object-cover object-center select-none"
+                    loading="lazy"
+                    decoding="async"
+                    width={1600}
+                    height={900}
+                    sizes="(min-width:1024px) 720px, (min-width:768px) 640px, 100vw"
                   />
                 </div>
               </div>
