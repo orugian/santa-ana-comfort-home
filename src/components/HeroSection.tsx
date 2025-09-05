@@ -37,7 +37,7 @@ export const HeroSection = () => {
             </h1>
 
             {/* Brand accent underline */}
-            <div className="mx-auto mt-3 h-1.5 w-24 rounded-full bg-gradient-to-r from-primary via-emerald-400 to-primary opacity-90"></div>
+            <div className="mx-auto mt-3 h-1.5 w-64 sm:w-80 md:w-96 rounded-full bg-gradient-to-r from-primary via-emerald-400 to-primary opacity-90"></div>
 
             {/* Subheading as a soft "glass chip" for contrast */}
             <p className="mt-5 mx-auto max-w-3xl text-base md:text-lg leading-relaxed text-slate-800/90 bg-white/60 md:bg-white/50 backdrop-blur-md rounded-xl px-4 py-2 ring-1 ring-white/60 shadow-sm">
