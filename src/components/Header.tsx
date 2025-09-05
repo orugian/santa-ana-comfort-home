@@ -56,7 +56,7 @@ export const Header = ({ activeSection }: HeaderProps) => {
                     : "text-foreground"
                 }`}
               >
-                {item.label}
+                <a href={`#${item.id}`} className="contents">{item.label}</a>
               </button>
             ))}
           </nav>
@@ -103,7 +103,7 @@ export const Header = ({ activeSection }: HeaderProps) => {
                       : "text-foreground hover:text-primary hover:bg-accent-light"
                   }`}
                 >
-                  {item.label}
+                  <a href={`#${item.id}`} className="contents">{item.label}</a>
                 </button>
               ))}
               <div className="flex flex-col space-y-2 pt-3 border-t border-gray-100">
