@@ -11,17 +11,17 @@ export const AboutSection = () => {
           {/* Mission, Vision, Values Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="bg-accent-light p-8 rounded-lg shadow-sm">
-              <h3 className="text-2xl font-semibold text-foreground mb-4 text-center">Missão</h3>
+              <h3 className="text-2xl text-foreground mb-4 text-center font-bold">Missão</h3>
               <p className="text-foreground/80 leading-relaxed">Proporcionar cuidado integral aos idosos, unindo amor, segurança e excelência técnica, em um ambiente acolhedor e humanizado. Nossa missão é garantir qualidade de vida aos residentes, tranquilidade às famílias e engajamento da equipe, transformando o ato de cuidar em um gesto de amor diário.   </p>
             </div>
 
             <div className="bg-accent-light p-8 rounded-lg shadow-sm">
-              <h3 className="text-2xl font-semibold text-foreground mb-4 text-center">Visão</h3>
+              <h3 className="text-2xl text-foreground mb-4 text-center font-bold">Visão</h3>
               <p className="text-foreground/80 leading-relaxed text-left">Ser reconhecido como uma instituição em São Paulo e no Brasil no cuidado humanizado ao idoso, evidenciando que é possivel oferecer atendimento técnico de alto nível em um ambiente familiar, onde cada idoso se sente valorizado, amado e respeitado.</p>
             </div>
 
             <div className="bg-accent-light p-8 rounded-lg shadow-sm">
-              <h3 className="text-2xl font-semibold text-foreground mb-4 text-center">Valores</h3>
+              <h3 className="text-2xl text-foreground mb-4 text-center font-bold">Valores</h3>
               <ul className="text-foreground/80 space-y-2">
                 <li>• Amor e cuidado: cada gesto e atendimento nasce do coração.</li>
                 <li>• Respeito e dignidade: honramos a vida, a história e a individualidade de cada residente.</li>
