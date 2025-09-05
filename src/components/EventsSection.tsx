@@ -152,13 +152,14 @@ export const EventsSection = () => {
             <div className="grid grid-cols-12 gap-6">
               {/* Featured Event image (left) */}
               <div className="col-span-12 lg:col-span-6">
-                <div className="relative w-full rounded-2xl overflow-hidden shadow-md bg-muted/20 aspect-[16/9] md:aspect-[21/9]">
+                <div className="relative rounded-2xl overflow-hidden h-56 md:h-64 lg:h-72 bg-muted/20">
                   <img
-                    src="/lovable-uploads/393455c5-238a-4f57-8f9f-ad9c29c672d2.png"
-                    alt="Celebração de aniversário de 90 anos de moradora do Lar Santa Ana com decoração de balões e bolo"
-                    className="absolute inset-0 h-full w-full object-cover"
+                    src="/lovable-uploads/53e3c128-ac99-4aed-b3f4-e6b67e20c68e.png"
+                    alt="Aniversário — moradora celebrando com bolo e decoração"
+                    className="absolute inset-0 w-full h-full object-cover object-[center_28%] md:object-[center_32%] select-none pointer-events-none"
                     loading="lazy"
                     decoding="async"
+                    draggable={false}
                   />
                 </div>
               </div>
