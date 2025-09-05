@@ -25,9 +25,9 @@ export const Footer = () => {
               <a href="https://www.facebook.com/residencialsantaana/?locale=pt_BR" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors">
                 <Facebook className="w-6 h-6" />
               </a>
-              <button onClick={() => scrollToSection('contact')} className="text-foreground/60 hover:text-accent transition-colors">
+              <a href="#" className="text-foreground/60 hover:text-accent transition-colors">
                 <MessageCircle className="w-6 h-6" />
-              </button>
+              </a>
             </div>
           </div>
 
