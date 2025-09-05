@@ -43,8 +43,8 @@ const FEATURED_EVENTS = [
     title: "Ceia de Natal",
     description:
       "Ceia natalina, troca de presentes e momentos emocionantes em família.",
-    imageSrc: "/images/eventos/natal.jpg",
-    imageAlt: "Ceia de Natal decorada",
+    imageSrc: "/lovable-uploads/2530bc44-4069-43df-a5d8-d99056e86075.png",
+    imageAlt: "Atividade de Natal com residentes e equipe",
     icon: "gift"
   }
 ];
@@ -157,7 +157,13 @@ export const EventsSection = () => {
                     src={currentEvent.imageSrc}
                     alt={currentEvent.imageAlt}
                     className="w-full h-[220px] sm:h-[260px] md:h-[300px] lg:h-[340px] xl:h-[380px] rounded-xl object-cover"
-                    style={currentEvent.title === "Celebração de Páscoa" ? { objectPosition: "50% 40%" } : undefined}
+                    style={
+                      currentEvent.title === "Celebração de Páscoa" 
+                        ? { objectPosition: "50% 40%" } 
+                        : currentEvent.title === "Ceia de Natal" || currentEvent.title?.includes("Natal")
+                        ? { objectPosition: "50% 45%" }
+                        : undefined
+                    }
                     loading="eager"
                     decoding="async"
                   />
