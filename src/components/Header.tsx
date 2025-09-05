@@ -69,6 +69,7 @@ export const Header = ({ activeSection }: HeaderProps) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Abrir chat no WhatsApp"
+                className="no-underline hover:no-underline"
               >
                 <MessageCircle className="w-4 h-4 mr-1" />
                 WhatsApp
@@ -112,6 +113,7 @@ export const Header = ({ activeSection }: HeaderProps) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Abrir chat no WhatsApp"
+                    className="no-underline hover:no-underline"
                   >
                     <MessageCircle className="w-4 h-4 mr-2" />
                     WhatsApp
