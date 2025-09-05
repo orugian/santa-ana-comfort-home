@@ -19,7 +19,7 @@ export const Footer = () => {
             </div>
             <p className="text-foreground/80 leading-relaxed">Mais de 15 anos dedicados ao cuidado de idosos com amor, respeito e profissionalismo no coração de Tatuapé.</p>
             <div className="flex space-x-4">
-              <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/lar_santa_ana/" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors">
                 <Instagram className="w-6 h-6" />
               </a>
               <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
