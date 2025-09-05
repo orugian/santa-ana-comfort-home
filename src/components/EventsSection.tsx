@@ -154,8 +154,8 @@ export const EventsSection = () => {
               <div className="col-span-12 lg:col-span-6">
                 <div className="relative w-full rounded-2xl overflow-hidden shadow-md bg-muted/20 aspect-[16/9] md:aspect-[21/9]">
                   <img
-                    src="/lovable-uploads/d4e59df8-9654-4922-834d-14722b247025.png"
-                    alt="Moradoras no jardim durante momento de lazer no Lar Santa Ana"
+                    src="/lovable-uploads/393455c5-238a-4f57-8f9f-ad9c29c672d2.png"
+                    alt="Celebração de aniversário de 90 anos de moradora do Lar Santa Ana com decoração de balões e bolo"
                     className="absolute inset-0 h-full w-full object-cover"
                     loading="lazy"
                     decoding="async"
