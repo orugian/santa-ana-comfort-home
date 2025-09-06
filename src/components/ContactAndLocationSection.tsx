@@ -88,7 +88,7 @@ export const ContactAndLocationSection = () => {
     const address = encodeURIComponent("R. Santa Gertrudes, 59 - Vila Gomes Cardim, São Paulo - SP, 03408-020, Brasil");
     window.open(`https://www.google.com/maps/search/?api=1&query=${address}`, '_blank');
   };
-  return <section id="contato" className="py-12 bg-white">
+  return <section id="contact" className="py-12 bg-white scroll-mt-28 md:scroll-mt-28 lg:scroll-mt-32">
       <div className="mx-auto max-w-[1200px] px-4">
         <div className="grid grid-cols-12 gap-8 lg:gap-12">
           {/* Left Column - Contact Information */}
