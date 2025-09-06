@@ -10,22 +10,19 @@ interface HeaderProps {
 export const Header = ({ activeSection }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    e.preventDefault();
-
-    const el = document.getElementById(targetId);
-    if (!el) return;
-
-    // Compute header height so the section isn't hidden under the fixed header
-    const headerEl = document.querySelector('header') as HTMLElement | null;
-    const headerHeight = headerEl ? headerEl.offsetHeight : 0;
-
-    const top = el.getBoundingClientRect().top + window.scrollY - (headerHeight + 8);
-    window.scrollTo({ top, behavior: "smooth" });
-
-    // Update URL hash without reloading
-    history.replaceState(null, "", `#${targetId}`);
-
+  const scrollToSection = (sectionId: string) => {
+    const el = document.getElementById(sectionId);
+    if (el) {
+      try {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      } catch {
+        // Fallback in rare cases
+        window.location.hash = sectionId;
+      }
+    } else {
+      // Absolute fallback: update hash so the browser tries to jump when it appears
+      window.location.hash = sectionId;
+    }
     setIsMenuOpen(false);
   };
 
@@ -57,20 +54,21 @@ export const Header = ({ activeSection }: HeaderProps) => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            {navItems.map((item) => (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                onClick={(e) => handleAnchorClick(e, item.id)}
-                className={`text-sm font-medium transition-colors px-3 py-2 rounded-md hover:bg-accent-light ${
-                  activeSection === item.id
-                    ? "text-primary bg-accent-light"
-                    : "text-foreground"
-                }`}
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const active = activeSection === item.id;
+              return (
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  onClick={(e) => { e.preventDefault(); scrollToSection(item.id); }}
+                  className={`text-sm font-medium transition-colors px-3 py-2 rounded-md hover:bg-accent-light ${
+                    active ? "text-primary bg-accent-light" : "text-foreground"
+                  }`}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
           </nav>
 
           {/* Contact Buttons */}
@@ -105,20 +103,21 @@ export const Header = ({ activeSection }: HeaderProps) => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100">
             <nav className="flex flex-col space-y-3">
-              {navItems.map((item) => (
-                <a
-                  key={item.id}
-                  href={`#${item.id}`}
-                  onClick={(e) => handleAnchorClick(e, item.id)}
-                  className={`text-left px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    activeSection === item.id
-                      ? "text-primary bg-accent-light"
-                      : "text-foreground hover:text-primary hover:bg-accent-light"
-                  }`}
-                >
-                  {item.label}
-                </a>
-              ))}
+              {navItems.map((item) => {
+                const active = activeSection === item.id;
+                return (
+                  <a
+                    key={item.id}
+                    href={`#${item.id}`}
+                    onClick={(e) => { e.preventDefault(); scrollToSection(item.id); }}
+                    className={`text-left px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      active ? "text-primary bg-accent-light" : "text-foreground hover:text-primary hover:bg-accent-light"
+                    }`}
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
 
               <div className="flex flex-col space-y-2 pt-3 border-t border-gray-100">
                 <Button size="sm" variant="whatsapp" className="justify-start" asChild>
