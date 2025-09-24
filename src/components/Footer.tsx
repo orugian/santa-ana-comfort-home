@@ -13,9 +13,17 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <img src="/brand/lar-santa-ana-logo.svg" alt="Lar Santa Ana Logo" className="w-8 h-8" />
-              <h3 className="text-2xl font-bold">Lar Santa Ana</h3>
+            <div className="flex items-center gap-2">
+              <img
+                src="/brand/lar-santa-ana-logo.png"
+                alt="Lar Santa Ana logo"
+                className="h-8 md:h-10 w-auto object-contain select-none"
+                width={160}
+                height={48}
+                loading="lazy"
+                decoding="async"
+              />
+              <span className="text-lg font-semibold">Lar Santa Ana</span>
             </div>
             <p className="text-foreground/80 leading-relaxed">Mais de 15 anos dedicados ao cuidado de idosos com amor, respeito e profissionalismo no coração de Tatuapé.</p>
             <div className="flex space-x-4">
