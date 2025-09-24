@@ -67,7 +67,7 @@ export const Header = ({ activeSection }: HeaderProps) => {
                   key={item.id}
                   href={`#${item.id}`}
                   onClick={(e) => { e.preventDefault(); scrollToSection(item.id); }}
-                  className={`text-sm font-medium transition-colors px-3 py-2 rounded-md hover:bg-accent-light ${
+                  className={`text-lg font-medium transition-colors px-3 py-2 rounded-md hover:bg-accent-light ${
                     active ? "text-primary bg-accent-light" : "text-foreground"
                   }`}
                 >
