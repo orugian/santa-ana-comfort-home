@@ -123,6 +123,9 @@
     --whatsapp: 142 70% 49%;
     --whatsapp-hover: 142 70% 39%;
 
+    /* Custom hover color */
+    --custom-pink: 328 99% 51%; /* #FF0389 */
+
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
