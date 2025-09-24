@@ -36,7 +36,7 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-slate-950">Navegação</h4>
             <ul className="space-y-2">
               <li>
-                <button onClick={() => scrollToSection("home")} className="transition-colors text-inherit">
+                <button onClick={() => scrollToSection("home")} className="text-foreground/70 hover:text-primary transition-colors">
                   Início
                 </button>
               </li>
