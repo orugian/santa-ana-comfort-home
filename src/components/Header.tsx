@@ -43,7 +43,7 @@ export const Header = ({ activeSection }: HeaderProps) => {
           <div className="flex items-center shrink-0">
             <button 
               onClick={() => scrollToSection("home")}
-              className="focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md"
+              className="focus:outline-none"
               aria-label="Ir para o topo da página"
             >
               <img
