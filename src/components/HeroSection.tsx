@@ -25,7 +25,7 @@ export const HeroSection = () => {
         {/* Soft white scrim for readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-white/92 via-white/78 to-white/50 md:from-white/85 md:via-white/70 md:to-white/45" />
         {/* Gentle top gradient for enhanced contrast */}
-        <div aria-hidden className="absolute inset-0 -z-0 bg-gradient-to-b from-white/35 via-white/15 to-transparent"></div>
+        <div aria-hidden className="absolute inset-0 -z-0 bg-gradient-to-b from-white/30 via-white/10 to-transparent"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-28">
