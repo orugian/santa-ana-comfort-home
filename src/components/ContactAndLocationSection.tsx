@@ -82,7 +82,7 @@ export const ContactAndLocationSection = () => {
   ];
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Olá! Gostaria de saber mais sobre o Lar Santa Ana.");
-    window.open(`https://wa.me/5511960243030?text=${message}`, '_blank');
+    window.open(`https://wa.me/5511961391788?text=${message}`, '_blank');
   };
   const handleGoogleMapsClick = () => {
     const address = encodeURIComponent("R. Santa Gertrudes, 59 - Vila Gomes Cardim, São Paulo - SP, 03408-020, Brasil");
