@@ -82,7 +82,7 @@ export const Header = ({ activeSection }: HeaderProps) => {
           <div className="hidden lg:flex items-center space-x-2">
             <Button size="sm" variant="whatsapp" asChild>
               <a
-                href={buildWhatsAppUrl("(11) 96139-1788", "Olá, vim do site Lar Santa Ana e gostaria de mais informações.")}
+                href="https://wa.me/5511980817690?text=Ol%C3%A1!%20Gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Residencial."
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Abrir chat no WhatsApp"
@@ -129,7 +129,7 @@ export const Header = ({ activeSection }: HeaderProps) => {
               <div className="flex flex-col space-y-2 pt-3 border-t border-gray-100">
                 <Button size="sm" variant="whatsapp" className="justify-start" asChild>
                   <a
-                    href={buildWhatsAppUrl("(11) 96139-1788", "Olá, vim do site Lar Santa Ana e gostaria de mais informações.")}
+                    href="https://wa.me/5511980817690?text=Ol%C3%A1!%20Gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Residencial."
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Abrir chat no WhatsApp"
