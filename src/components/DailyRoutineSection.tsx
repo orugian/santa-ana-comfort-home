@@ -1,4 +1,5 @@
 import { Sun, Coffee, UtensilsCrossed, Activity, Gamepad2, Moon, Heart, Users } from "lucide-react";
+import BorderGlow from "./BorderGlow";
 export const DailyRoutineSection = () => {
   const routineItems = [{
     time: "07:00",
@@ -82,24 +83,34 @@ export const DailyRoutineSection = () => {
 
                   {/* Content Card */}
                   <div className={`ml-24 md:ml-0 w-full md:w-5/12 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
-                    <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 p-6 border-l-4 border-[#85C441] hover:border-[#2A70D6]">
-                      <div className="flex items-start space-x-4">
-                        <div className={`p-3 rounded-lg ${item.color} relative overflow-hidden`}>
-                          <div className={`absolute inset-0 ${item.iconBg} opacity-20`}></div>
-                          <item.icon className="w-6 h-6 relative z-10 text-white" style={{
-                        filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.1))'
-                      }} />
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-lg font-semibold mb-2 text-slate-950">
-                            {item.title}
-                          </h3>
-                          <p className="text-gray-600 leading-relaxed">
-                            {item.description}
-                          </p>
+                    <BorderGlow
+                      backgroundColor="#ffffff"
+                      borderRadius={12}
+                      glowColor="212 70 50"
+                      glowRadius={30}
+                      glowIntensity={0.9}
+                      edgeSensitivity={20}
+                      colors={['#2A70D6', '#85C441', '#005BAC']}
+                    >
+                      <div className="p-6 border-l-4 border-[#85C441] rounded-[12px]">
+                        <div className="flex items-start space-x-4">
+                          <div className={`p-3 rounded-lg ${item.color} relative overflow-hidden`}>
+                            <div className={`absolute inset-0 ${item.iconBg} opacity-20`}></div>
+                            <item.icon className="w-6 h-6 relative z-10 text-white" style={{
+                              filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.1))'
+                            }} />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-lg font-semibold mb-2 text-slate-950">
+                              {item.title}
+                            </h3>
+                            <p className="text-gray-600 leading-relaxed">
+                              {item.description}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </BorderGlow>
                   </div>
                 </div>)}
             </div>
