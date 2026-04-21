@@ -127,14 +127,14 @@ export const EventsSection = () => {
 
         {/* Featured Gallery (Dome) */}
         <div className="mb-16">
-          <div className="rounded-2xl bg-[#120F17] p-2 overflow-hidden">
+          <div className="rounded-2xl section-secondary-bg p-2 overflow-hidden">
             <div className="relative w-full h-[480px] sm:h-[560px] md:h-[640px]">
               <DomeGallery
                 images={galleryImages}
                 grayscale={false}
                 fit={0.6}
                 minRadius={400}
-                overlayBlurColor="#120F17"
+                overlayBlurColor="#F4F4F5"
                 imageBorderRadius="20px"
                 openedImageBorderRadius="20px"
               />
