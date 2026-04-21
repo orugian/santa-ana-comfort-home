@@ -1,5 +1,5 @@
 import { Gift, Heart, Star } from "lucide-react";
-import CircularGallery from "@/components/CircularGallery";
+import DomeGallery from "@/components/DomeGallery";
 
 const FEATURED_EVENTS = [
   {
@@ -109,9 +109,9 @@ const getBadgeStyles = (key: string) => {
 };
 
 export const EventsSection = () => {
-  const galleryItems = FEATURED_EVENTS.map((e) => ({
-    image: e.imageSrc,
-    text: e.title
+  const galleryImages = FEATURED_EVENTS.map((e) => ({
+    src: e.imageSrc,
+    alt: e.imageAlt
   }));
 
   return (
@@ -125,16 +125,18 @@ export const EventsSection = () => {
           </p>
         </div>
 
-        {/* Featured Gallery (Circular) */}
+        {/* Featured Gallery (Dome) */}
         <div className="mb-16">
           <div className="rounded-2xl section-secondary-bg p-2 overflow-hidden">
             <div className="relative w-full h-[480px] sm:h-[560px] md:h-[640px]">
-              <CircularGallery
-                items={galleryItems}
-                bend={3}
-                textColor="#0f172a"
-                borderRadius={0.05}
-                scrollEase={0.02}
+              <DomeGallery
+                images={galleryImages}
+                grayscale={false}
+                fit={0.6}
+                minRadius={400}
+                overlayBlurColor="#F4F4F5"
+                imageBorderRadius="20px"
+                openedImageBorderRadius="20px"
               />
             </div>
           </div>
