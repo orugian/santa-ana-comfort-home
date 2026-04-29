@@ -33,7 +33,7 @@ export const HeroSection = () => {
           {/* New refined heading block */}
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 drop-shadow-[0_1px_0_rgba(255,255,255,0.6)]">
-              Residencial para Idosos
+              Residencial para Idosos Tatuapé
             </h1>
 
             {/* Brand accent underline */}
