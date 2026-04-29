@@ -1,5 +1,5 @@
-import { Gift, Heart, Star } from "lucide-react";
-import DomeGallery from "@/components/DomeGallery";
+import { useState, useEffect } from "react";
+import { Gift, Heart, Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 const FEATURED_EVENTS = [
   {
@@ -109,10 +109,31 @@ const getBadgeStyles = (key: string) => {
 };
 
 export const EventsSection = () => {
-  const galleryImages = FEATURED_EVENTS.map((e) => ({
-    src: e.imageSrc,
-    alt: e.imageAlt
-  }));
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") {
+        setCurrentSlide((prev) => (prev === 0 ? FEATURED_EVENTS.length - 1 : prev - 1));
+      } else if (e.key === "ArrowRight") {
+        setCurrentSlide((prev) => (prev === FEATURED_EVENTS.length - 1 ? 0 : prev + 1));
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === FEATURED_EVENTS.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? FEATURED_EVENTS.length - 1 : prev - 1));
+  };
+
+  const currentEvent = FEATURED_EVENTS[currentSlide];
+  const IconComponent = getIcon(currentEvent.icon);
 
   return (
     <section id="eventos" className="py-20 section-secondary-bg">
@@ -125,19 +146,75 @@ export const EventsSection = () => {
           </p>
         </div>
 
-        {/* Featured Gallery (Dome) */}
+        {/* Featured Carousel */}
         <div className="mb-16">
-          <div className="rounded-2xl section-secondary-bg p-2 overflow-hidden">
-            <div className="relative w-full h-[480px] sm:h-[560px] md:h-[640px]">
-              <DomeGallery
-                images={galleryImages}
-                grayscale={false}
-                fit={0.6}
-                minRadius={400}
-                overlayBlurColor="#F4F4F5"
-                imageBorderRadius="20px"
-                openedImageBorderRadius="20px"
-              />
+          <div className="rounded-2xl bg-white/60 backdrop-blur-[1px] p-2">
+            <div className="grid grid-cols-12 gap-6">
+              {/* Image */}
+              <div className="col-span-12 lg:col-span-6">
+                <div className="relative rounded-2xl overflow-hidden bg-muted/20">
+                  <img
+                    src={currentEvent.imageSrc}
+                    alt={currentEvent.imageAlt}
+                    className="w-full h-[220px] sm:h-[260px] md:h-[300px] lg:h-[340px] xl:h-[380px] rounded-xl object-cover"
+                    style={
+                      currentEvent.title === "Celebração de Páscoa" 
+                        ? { objectPosition: "50% 40%" } 
+                        : currentEvent.title === "Ceia de Natal" || currentEvent.title?.includes("Natal")
+                        ? { objectPosition: "50% 45%" }
+                        : undefined
+                    }
+                    loading="eager"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="col-span-12 lg:col-span-6 rounded-2xl p-6 md:p-8 bg-gradient-to-br from-[#F7F7FF] to-[#F7FBFF] border border-black/5 shadow-sm flex flex-col gap-4">
+                {/* Icon Badge */}
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary shadow-[inset_0_0_0_1px_rgba(37,99,235,0.12)]">
+                  <IconComponent className="w-6 h-6" aria-hidden="true" />
+                </div>
+
+                {/* Title */}
+                <h3 className="text-2xl font-semibold text-slate-950">{currentEvent.title}</h3>
+
+                {/* Description */}
+                <p className="text-[#6B7280] leading-relaxed flex-1">{currentEvent.description}</p>
+
+                {/* Controls */}
+                <div className="mt-auto flex items-center gap-3">
+                  <button
+                    onClick={prevSlide}
+                    className="inline-flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5 transition-colors"
+                    aria-label="Slide anterior"
+                  >
+                    <ChevronLeft className="w-5 h-5 text-[#6B7280]" />
+                  </button>
+                  <button
+                    onClick={nextSlide}
+                    className="inline-flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5 transition-colors"
+                    aria-label="Próximo slide"
+                  >
+                    <ChevronRight className="w-5 h-5 text-[#6B7280]" />
+                  </button>
+
+                  {/* Dots */}
+                  <div className="flex gap-2 ml-3">
+                    {FEATURED_EVENTS.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentSlide(index)}
+                        className={`h-2 w-2 rounded-full transition-colors ${
+                          index === currentSlide ? "bg-[#2563EB]" : "bg-[#D1D5DB]"
+                        }`}
+                        aria-label={`Ir para slide ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
