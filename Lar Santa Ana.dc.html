@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:#FFFFFF;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  ::selection{background:#9DDDC1;color:#16233B;}
+  @keyframes revealUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:none;}}
+  @keyframes floatY{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
+  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+  @media (max-width:900px){.lsa-hero-grid{grid-template-columns:1fr !important;}.lsa-nav-desktop{display:none !important;}.lsa-burger{display:inline-flex !important;}.lsa-essencia-grid{grid-template-columns:1fr !important;}.lsa-contact-grid{grid-template-columns:1fr !important;}}
+  @media (max-width:640px){.lsa-section{padding-left:20px !important;padding-right:20px !important;}}
+</style>
+<!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-TN39GHJF');
+</script>
+<!-- End Google Tag Manager -->
+</helmet>
+
+<div style="font-family:'Mulish',system-ui,sans-serif;color:#56616F;background:#FFFFFF;overflow-x:hidden;">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TN39GHJF"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ===================== HEADER ===================== -->
+  <header style="position:fixed;top:0;left:0;width:100%;z-index:60;background:rgba(255,255,255,0.82);backdrop-filter:blur(14px);border-bottom:1px solid #ECE8DF;">
+    <div style="max-width:1240px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:84px;">
+      <a href="#home" onClick="{{ navHome }}" style="display:flex;align-items:center;text-decoration:none;flex-shrink:0;" aria-label="Lar Santa Ana — início">
+        <img src="assets/logo-lar-santa-ana.png" alt="Lar Santa Ana" style="height:58px;width:auto;display:block;" loading="eager" decoding="async">
+      </a>
+      <nav class="lsa-nav-desktop" style="display:flex;align-items:center;gap:6px;">
+        <a href="#home" onClick="{{ nav }}" data-nav="home" style="font:600 15px/1 'Mulish';color:#16233B;text-decoration:none;padding:10px 14px;border-radius:9px;transition:color .2s,background .2s;">Início</a>
+        <a href="#essencia" onClick="{{ nav }}" data-nav="essencia" style="font:600 15px/1 'Mulish';color:#16233B;text-decoration:none;padding:10px 14px;border-radius:9px;transition:color .2s,background .2s;">Nossa Essência</a>
+        <a href="#cuidados" onClick="{{ nav }}" data-nav="cuidados" style="font:600 15px/1 'Mulish';color:#16233B;text-decoration:none;padding:10px 14px;border-radius:9px;transition:color .2s,background .2s;">Cuidados</a>
+        <a href="#rotina" onClick="{{ nav }}" data-nav="rotina" style="font:600 15px/1 'Mulish';color:#16233B;text-decoration:none;padding:10px 14px;border-radius:9px;transition:color .2s,background .2s;">Rotina</a>
+        <a href="#momentos" onClick="{{ nav }}" data-nav="momentos" style="font:600 15px/1 'Mulish';color:#16233B;text-decoration:none;padding:10px 14px;border-radius:9px;transition:color .2s,background .2s;">Momentos</a>
+        <a href="#contato" onClick="{{ nav }}" data-nav="contato" style="font:600 15px/1 'Mulish';color:#16233B;text-decoration:none;padding:10px 14px;border-radius:9px;transition:color .2s,background .2s;">Contato</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <a href="https://wa.me/5511980817690?text=Ol%C3%A1!%20Gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Residencial." target="_blank" rel="noopener noreferrer" onClick="{{ waClick }}" style="display:inline-flex;align-items:center;gap:9px;background:#25D366;color:#fff;font:700 14px/1 'Mulish';text-decoration:none;padding:13px 20px;border-radius:11px;box-shadow:0 8px 20px -8px rgba(37,211,102,.6);transition:transform .15s,box-shadow .15s;" onMouseOver="{{ btnUp }}" onMouseOut="{{ btnDown }}">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.13c-1.52 0-3.01-.41-4.3-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.35c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.69 8.23 8.23 0 4.54-3.69 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+          WhatsApp
+        </a>
+        <button class="lsa-burger" onClick="{{ toggleMenu }}" aria-label="Abrir menu" style="display:none;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid #E5E1D7;background:#fff;border-radius:11px;cursor:pointer;color:#16233B;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+      </div>
+    </div>
+    <div style="{{ mobileMenuStyle }}">
+      <a href="#home" onClick="{{ nav }}" style="font:600 16px/1 'Mulish';color:#16233B;text-decoration:none;padding:13px 6px;border-bottom:1px solid #F1EEE6;">Início</a>
+      <a href="#essencia" onClick="{{ nav }}" style="font:600 16px/1 'Mulish';color:#16233B;text-decoration:none;padding:13px 6px;border-bottom:1px solid #F1EEE6;">Nossa Essência</a>
+      <a href="#cuidados" onClick="{{ nav }}" style="font:600 16px/1 'Mulish';color:#16233B;text-decoration:none;padding:13px 6px;border-bottom:1px solid #F1EEE6;">Cuidados</a>
+      <a href="#rotina" onClick="{{ nav }}" style="font:600 16px/1 'Mulish';color:#16233B;text-decoration:none;padding:13px 6px;border-bottom:1px solid #F1EEE6;">Rotina Diária</a>
+      <a href="#momentos" onClick="{{ nav }}" style="font:600 16px/1 'Mulish';color:#16233B;text-decoration:none;padding:13px 6px;border-bottom:1px solid #F1EEE6;">Momentos</a>
+      <a href="#contato" onClick="{{ nav }}" style="font:600 16px/1 'Mulish';color:#16233B;text-decoration:none;padding:13px 6px;">Contato</a>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home" style="position:relative;min-height:100vh;display:flex;align-items:flex-end;background-image:url('assets/hero-jardim.jpg');background-size:cover;background-position:62% 50%;overflow:hidden;" class="lsa-section">
+    <!-- Overlay gradiente escuro -->
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,25,48,0.1) 0%,rgba(14,25,48,0.55) 50%,rgba(14,25,48,0.82) 100%);pointer-events:none;"></div>
+
+    <!-- Conteúdo principal -->
+    <div style="position:relative;z-index:1;width:100%;max-width:1240px;margin:0 auto;padding:120px 28px 88px;">
+      <div style="max-width:660px;">
+        <div style="display:inline-flex;align-items:center;gap:9px;font:700 13px/1 'Mulish';letter-spacing:.16em;text-transform:uppercase;color:#9DDDC1;margin-bottom:26px;">
+          <span style="width:7px;height:7px;border-radius:50%;background:#85C441;display:inline-block;"></span>
+          Lar Santa Ana · Tatuapé, São Paulo
+        </div>
+        <h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(2.7rem,5.2vw,4.4rem);line-height:1.04;letter-spacing:-0.02em;color:#ffffff;margin:0 0 24px;">Residencial para<br>Idosos Tatuapé</h1>
+        <p style="font-size:clamp(1.08rem,1.5vw,1.28rem);line-height:1.65;color:rgba(255,255,255,0.88);max-width:520px;margin:0 0 36px;">Há mais de 15 anos cuidando do idoso com conforto, segurança e atenção personalizada.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px;">
+          <a href="https://wa.me/5511980817690?text=Ol%C3%A1!%20Gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Residencial." target="_blank" rel="noopener noreferrer" onClick="{{ waClick }}" style="display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;font:700 16px/1 'Mulish';text-decoration:none;padding:17px 28px;border-radius:13px;box-shadow:0 12px 26px -10px rgba(37,211,102,.65);transition:transform .15s,box-shadow .15s;" onMouseOver="{{ btnUp }}" onMouseOut="{{ btnDown }}">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm4.52 11.97c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+            Falar no WhatsApp
+          </a>
+          <a href="#contato" onClick="{{ nav }}" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.12);backdrop-filter:blur(10px);color:#fff;font:700 16px/1 'Mulish';text-decoration:none;padding:17px 28px;border-radius:13px;border:1.5px solid rgba(255,255,255,0.38);transition:transform .15s,background .2s;" onMouseOver="{{ btnUp }}" onMouseOut="{{ btnDown }}">Agende uma visita</a>
+        </div>
+        <div style="display:flex;gap:34px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.18);padding-top:26px;">
+          <div><div style="font-family:'Newsreader',serif;font-weight:600;font-size:2rem;color:#9DDDC1;line-height:1;">15+</div><div style="font:600 13.5px/1.3 'Mulish';color:rgba(255,255,255,0.72);margin-top:6px;">anos de<br>cuidado</div></div>
+          <div><div style="font-family:'Newsreader',serif;font-weight:600;font-size:2rem;color:#9DDDC1;line-height:1;">100+</div><div style="font:600 13.5px/1.3 'Mulish';color:rgba(255,255,255,0.72);margin-top:6px;">famílias<br>atendidas</div></div>
+          <div><div style="font-family:'Newsreader',serif;font-weight:600;font-size:2rem;color:#9DDDC1;line-height:1;">24h</div><div style="font:600 13.5px/1.3 'Mulish';color:rgba(255,255,255,0.72);margin-top:6px;">assistência<br>7 dias/semana</div></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===================== PILARES ===================== -->
+  <section style="padding:72px 28px 92px;max-width:1240px;margin:0 auto;" class="lsa-section">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;">
+      <div style="opacity:0;animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% cover 22%;background:#fff;border:1px solid #ECE8DF;border-radius:20px;padding:32px 28px;box-shadow:0 18px 40px -28px rgba(22,35,59,.22);">
+        <div style="width:52px;height:52px;border-radius:14px;background:#EFF4FE;display:flex;align-items:center;justify-content:center;color:#2563EB;margin-bottom:20px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3 style="font-family:'Mulish';font-weight:800;font-size:1.28rem;color:#16233B;margin:0 0 10px;">Atenção Personalizada</h3>
+        <p style="font-size:1rem;line-height:1.6;color:#56616F;margin:0;">Cuidado com foco nas necessidades específicas de cada residente.</p>
+      </div>
+      <div style="opacity:0;animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% cover 22%;background:#fff;border:1px solid #ECE8DF;border-radius:20px;padding:32px 28px;box-shadow:0 18px 40px -28px rgba(22,35,59,.22);">
+        <div style="width:52px;height:52px;border-radius:14px;background:#EDF7F2;display:flex;align-items:center;justify-content:center;color:#2E9B78;margin-bottom:20px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2a.3.3 0 0 0-.2.3"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><path d="M11 3H9a1 1 0 0 0-1 1v6a3 3 0 0 0 6 0V4a1 1 0 0 0-1-1h-2"/><circle cx="20" cy="10" r="2"/></svg>
+        </div>
+        <h3 style="font-family:'Mulish';font-weight:800;font-size:1.28rem;color:#16233B;margin:0 0 10px;">Expertise Geriátrica</h3>
+        <p style="font-size:1rem;line-height:1.6;color:#56616F;margin:0;">Equipe especializada em gerontologia com mais de 15 anos de experiência.</p>
+      </div>
+      <div style="opacity:0;animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% cover 22%;background:#fff;border:1px solid #ECE8DF;border-radius:20px;padding:32px 28px;box-shadow:0 18px 40px -28px rgba(22,35,59,.22);">
+        <div style="width:52px;height:52px;border-radius:14px;background:#F3F7EC;display:flex;align-items:center;justify-content:center;color:#6FA52F;margin-bottom:20px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 8.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8.5"/><path d="M9 21v-6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6"/></svg>
+        </div>
+        <h3 style="font-family:'Mulish';font-weight:800;font-size:1.28rem;color:#16233B;margin:0 0 10px;">Ambiente Familiar</h3>
+        <p style="font-size:1rem;line-height:1.6;color:#56616F;margin:0;">Um lar acolhedor onde o idoso se sente parte da família Santa Ana.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NOSSA ESSÊNCIA ===================== -->
+  <section id="essencia" style="padding:96px 28px;background:#F7F3EA;scroll-margin-top:84px;" class="lsa-section">
+    <div style="max-width:1240px;margin:0 auto;">
+      <div style="text-align:center;max-width:680px;margin:0 auto 56px;opacity:0;animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% cover 20%;">
+        <div style="display:inline-flex;align-items:center;gap:9px;font:700 13px/1 'Mulish';letter-spacing:.16em;text-transform:uppercase;color:#2563EB;margin-bottom:18px;"><span style="width:7px;height:7px;border-radius:50%;background:#85C441;"></span>Quem somos</div>
+        <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(2.1rem,3.6vw,3.1rem);line-height:1.1;letter-spacing:-0.02em;color:#16233B;margin:0;">Nossa Essência</h2>
+      </div>
+      <div class="lsa-essencia-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:24px;">
+        <div style="background:#fff;border-radius:22px;padding:36px 32px;border:1px solid #ECE6D8;">
+          <div style="font-family:'Newsreader',serif;font-style:italic;font-size:1.5rem;color:#2563EB;margin-bottom:18px;">Missão</div>
+          <p style="font-size:1.02rem;line-height:1.72;color:#56616F;margin:0;">Proporcionar cuidado integral aos idosos, unindo amor, segurança e excelência técnica, em um ambiente acolhedor e humanizado. Garantir qualidade de vida aos residentes, tranquilidade às famílias e engajamento da equipe, transformando o ato de cuidar em um gesto de amor diário.</p>
+        </div>
+        <div style="background:#fff;border-radius:22px;padding:36px 32px;border:1px solid #ECE6D8;">
+          <div style="font-family:'Newsreader',serif;font-style:italic;font-size:1.5rem;color:#2563EB;margin-bottom:18px;">Visão</div>
+          <p style="font-size:1.02rem;line-height:1.72;color:#56616F;margin:0;">Ser reconhecido como uma instituição de referência em São Paulo e no Brasil no cuidado humanizado ao idoso, evidenciando que é possível oferecer atendimento técnico de alto nível em um ambiente familiar, onde cada idoso se sente valorizado, amado e respeitado.</p>
+        </div>
+        <div style="background:#fff;border-radius:22px;padding:36px 32px;border:1px solid #ECE6D8;">
+          <div style="font-family:'Newsreader',serif;font-style:italic;font-size:1.5rem;color:#2563EB;margin-bottom:18px;">Valores</div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;">
+            <li style="display:flex;gap:11px;font-size:0.98rem;line-height:1.5;color:#56616F;"><span style="color:#85C441;flex-shrink:0;margin-top:2px;">●</span><span><strong style="color:#16233B;font-weight:700;">Amor e cuidado:</strong> cada gesto nasce do coração.</span></li>
+            <li style="display:flex;gap:11px;font-size:0.98rem;line-height:1.5;color:#56616F;"><span style="color:#85C441;flex-shrink:0;margin-top:2px;">●</span><span><strong style="color:#16233B;font-weight:700;">Respeito e dignidade:</strong> honramos a história de cada residente.</span></li>
+            <li style="display:flex;gap:11px;font-size:0.98rem;line-height:1.5;color:#56616F;"><span style="color:#85C441;flex-shrink:0;margin-top:2px;">●</span><span><strong style="color:#16233B;font-weight:700;">Excelência técnica:</strong> segurança e qualidade com equipe capacitada.</span></li>
+            <li style="display:flex;gap:11px;font-size:0.98rem;line-height:1.5;color:#56616F;"><span style="color:#85C441;flex-shrink:0;margin-top:2px;">●</span><span><strong style="color:#16233B;font-weight:700;">Família:</strong> acolhemos familiares com serenidade e confiança.</span></li>
+          </ul>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:32px;">
+        <div style="background:linear-gradient(135deg,#2563EB,#3F7BF0);border-radius:22px;padding:36px 28px;text-align:center;color:#fff;box-shadow:0 22px 44px -24px rgba(37,99,235,.6);">
+          <div style="font-family:'Newsreader',serif;font-weight:600;font-size:3.2rem;line-height:1;margin-bottom:8px;">10+</div>
+          <div style="font:600 15px/1.3 'Mulish';opacity:.92;">Anos de Experiência</div>
+        </div>
+        <div style="background:linear-gradient(135deg,#2563EB,#3F7BF0);border-radius:22px;padding:36px 28px;text-align:center;color:#fff;box-shadow:0 22px 44px -24px rgba(37,99,235,.6);">
+          <div style="font-family:'Newsreader',serif;font-weight:600;font-size:3.2rem;line-height:1;margin-bottom:8px;">100+</div>
+          <div style="font:600 15px/1.3 'Mulish';opacity:.92;">Famílias Atendidas</div>
+        </div>
+        <div style="background:linear-gradient(135deg,#2E9B78,#4FB392);border-radius:22px;padding:36px 28px;text-align:center;color:#fff;box-shadow:0 22px 44px -24px rgba(46,155,120,.55);">
+          <div style="font-family:'Newsreader',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin-bottom:8px;">Tatuapé</div>
+          <div style="font:600 15px/1.3 'Mulish';opacity:.92;">Zona Leste — São Paulo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NOSSOS CUIDADOS ===================== -->
+  <section id="cuidados" style="padding:96px 28px;scroll-margin-top:84px;" class="lsa-section">
+    <div style="max-width:1240px;margin:0 auto;">
+      <div style="text-align:center;max-width:720px;margin:0 auto 56px;opacity:0;animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% cover 20%;">
+        <div style="display:inline-flex;align-items:center;gap:9px;font:700 13px/1 'Mulish';letter-spacing:.16em;text-transform:uppercase;color:#2563EB;margin-bottom:18px;"><span style="width:7px;height:7px;border-radius:50%;background:#85C441;"></span>O que oferecemos</div>
+        <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(2.1rem,3.6vw,3.1rem);line-height:1.1;letter-spacing:-0.02em;color:#16233B;margin:0 0 18px;">Nossos Cuidados</h2>
+        <p style="font-size:1.12rem;line-height:1.65;color:#56616F;margin:0;">A moradia completa e segura que você procura e o idoso merece. No nosso residencial você encontra bem-estar físico, mental e social.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:20px;">
+        <sc-for list="{{ services }}" as="svc" hint-placeholder-count="8">
+          <div style="background:#fff;border:1px solid #ECE8DF;border-radius:18px;padding:26px 24px;box-shadow:0 14px 34px -26px rgba(22,35,59,.25);display:flex;flex-direction:column;gap:12px;">
+            <div style="width:46px;height:46px;border-radius:12px;background:#EDF7F2;display:flex;align-items:center;justify-content:center;color:#2563EB;" innerHTML="{{ svc.icon }}"></div>
+            <div style="font:700 11px/1 'Mulish';letter-spacing:.12em;text-transform:uppercase;color:#9AA4B2;">{{ svc.group }}</div>
+            <h3 style="font-family:'Mulish';font-weight:800;font-size:1.12rem;color:#16233B;margin:0;line-height:1.25;">{{ svc.title }}</h3>
+            <p style="font-size:0.96rem;line-height:1.55;color:#56616F;margin:0;">{{ svc.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="margin-top:40px;background:#F7F3EA;border-radius:26px;padding:48px 40px;">
+        <div style="text-align:center;max-width:640px;margin:0 auto 36px;">
+          <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(1.7rem,2.6vw,2.2rem);color:#16233B;margin:0 0 14px;letter-spacing:-0.01em;">Cuidado Personalizado</h3>
+          <p style="font-size:1.06rem;line-height:1.6;color:#56616F;margin:0;">Cada residente recebe um plano de cuidados sob medida, co-criado com a família e nossa equipe multidisciplinar.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;">
+          <div style="text-align:center;">
+            <div style="width:62px;height:62px;border-radius:50%;background:#fff;border:1px solid #E6E0D2;display:flex;align-items:center;justify-content:center;color:#2563EB;margin:0 auto 16px;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h4 style="font:800 1.08rem/1.3 'Mulish';color:#16233B;margin:0 0 8px;">Equipe Multidisciplinar</h4>
+            <p style="font-size:0.96rem;line-height:1.55;color:#56616F;margin:0;">Médicos, enfermeiros, fisioterapeutas, psicólogos e cuidadores especializados.</p>
+          </div>
+          <div style="text-align:center;">
+            <div style="width:62px;height:62px;border-radius:50%;background:#fff;border:1px solid #E6E0D2;display:flex;align-items:center;justify-content:center;color:#2E9B78;margin:0 auto 16px;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </div>
+            <h4 style="font:800 1.08rem/1.3 'Mulish';color:#16233B;margin:0 0 8px;">Cuidado 24h</h4>
+            <p style="font-size:0.96rem;line-height:1.55;color:#56616F;margin:0;">Monitoramento e assistência disponível 24 horas por dia, 7 dias por semana.</p>
+          </div>
+          <div style="text-align:center;">
+            <div style="width:62px;height:62px;border-radius:50%;background:#fff;border:1px solid #E6E0D2;display:flex;align-items:center;justify-content:center;color:#6FA52F;margin:0 auto 16px;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h4 style="font:800 1.08rem/1.3 'Mulish';color:#16233B;margin:0 0 8px;">Avaliação Contínua</h4>
+            <p style="font-size:0.96rem;line-height:1.55;color:#56616F;margin:0;">Acompanhamento regular do estado de saúde e ajustes no plano de cuidados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ROTINA DIÁRIA ===================== -->
+  <section id="rotina" style="padding:96px 28px;background:linear-gradient(180deg,#FBF8F2 0%,#FFFFFF 100%);scroll-margin-top:84px;" class="lsa-section">
+    <div style="max-width:900px;margin:0 auto;">
+      <div style="text-align:center;max-width:680px;margin:0 auto 56px;opacity:0;animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% cover 20%;">
+        <div style="display:inline-flex;align-items:center;gap:9px;font:700 13px/1 'Mulish';letter-spacing:.16em;text-transform:uppercase;color:#2563EB;margin-bottom:18px;"><span style="width:7px;height:7px;border-radius:50%;background:#85C441;"></span>Um dia no lar</div>
+        <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(2.1rem,3.6vw,3.1rem);line-height:1.1;letter-spacing:-0.02em;color:#16233B;margin:0 0 18px;">Nossa Rotina Diária</h2>
+        <p style="font-size:1.12rem;line-height:1.65;color:#56616F;margin:0;">Atividades pensadas para promover saúde, conforto e alegria a cada momento do dia.</p>
+      </div>
+      <div style="position:relative;padding-left:8px;">
+        <div style="position:absolute;left:44px;top:10px;bottom:10px;width:2px;background:linear-gradient(180deg,#2563EB,#9DDDC1,#85C441);"></div>
+        <div style="display:flex;flex-direction:column;gap:22px;">
+          <sc-for list="{{ routine }}" as="r" hint-placeholder-count="8">
+            <div style="position:relative;display:flex;align-items:flex-start;gap:26px;">
+              <div style="flex-shrink:0;width:74px;height:74px;border-radius:50%;background:#fff;border:2px solid #2563EB;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:1;box-shadow:0 8px 20px -10px rgba(37,99,235,.4);">
+                <span style="font:800 15px/1 'Mulish';color:#16233B;">{{ r.time }}</span>
+              </div>
+              <div style="flex:1;background:#fff;border:1px solid #ECE8DF;border-left:4px solid #9DDDC1;border-radius:14px;padding:20px 24px;box-shadow:0 12px 30px -24px rgba(22,35,59,.3);">
+                <h3 style="font:800 1.12rem/1.3 'Mulish';color:#16233B;margin:0 0 7px;">{{ r.title }}</h3>
+                <p style="font-size:0.98rem;line-height:1.55;color:#56616F;margin:0;">{{ r.desc }}</p>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MOMENTOS ===================== -->
+  <section id="momentos" style="padding:96px 28px;background:#EDF7F2;scroll-margin-top:84px;" class="lsa-section">
+    <div style="max-width:1240px;margin:0 auto;">
+      <div style="text-align:center;max-width:720px;margin:0 auto 56px;opacity:0;animation:revealUp linear both;animation-timeline:view();animation-range:entry 0% cover 20%;">
+        <div style="display:inline-flex;align-items:center;gap:9px;font:700 13px/1 'Mulish';letter-spacing:.16em;text-transform:uppercase;color:#2563EB;margin-bottom:18px;"><span style="width:7px;height:7px;border-radius:50%;background:#85C441;"></span>Vida no lar</div>
+        <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(2.1rem,3.6vw,3.1rem);line-height:1.1;letter-spacing:-0.02em;color:#16233B;margin:0 0 18px;">Eventos e Celebrações</h2>
+        <p style="font-size:1.12rem;line-height:1.65;color:#56616F;margin:0;">Momentos especiais que trazem alegria, união e memórias inesquecíveis para nossos residentes e suas famílias.</p>
+      </div>
+
+      <!-- Featured carousel -->
+      <div style="background:#fff;border-radius:26px;padding:14px;box-shadow:0 30px 60px -38px rgba(22,35,59,.4);border:1px solid #E3EFE9;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch;" class="lsa-essencia-grid">
+          <div style="position:relative;border-radius:18px;overflow:hidden;min-height:340px;">
+            <img src="{{ currentEvent.img }}" alt="{{ currentEvent.alt }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:{{ currentEvent.pos }};">
+          </div>
+          <div style="padding:34px 32px;display:flex;flex-direction:column;gap:16px;">
+            <div style="width:50px;height:50px;border-radius:14px;background:#EFF4FE;display:flex;align-items:center;justify-content:center;color:#2563EB;" innerHTML="{{ currentEvent.icon }}"></div>
+            <div style="font:700 12px/1 'Mulish';letter-spacing:.14em;text-transform:uppercase;color:#9AA4B2;">{{ currentEventCounter }}</div>
+            <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(1.6rem,2.6vw,2.1rem);color:#16233B;margin:0;line-height:1.15;">{{ currentEvent.title }}</h3>
+            <p style="font-size:1.05rem;line-height:1.65;color:#56616F;margin:0;flex:1;">{{ currentEvent.desc }}</p>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:6px;">
+              <button onClick="{{ prevSlide }}" aria-label="Anterior" style="width:46px;height:46px;border-radius:50%;border:1.5px solid #DFE9E4;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#16233B;transition:background .2s;" onMouseOver="{{ ctrlOver }}" onMouseOut="{{ ctrlOut }}">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <button onClick="{{ nextSlide }}" aria-label="Próximo" style="width:46px;height:46px;border-radius:50%;border:1.5px solid #DFE9E4;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#16233B;transition:background .2s;" onMouseOver="{{ ctrlOver }}" onMouseOut="{{ ctrlOut }}">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+              <div style="display:flex;gap:8px;margin-left:8px;" innerHTML="{{ dotsHtml }}"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery -->
+      <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(1.5rem,2.4vw,1.9rem);color:#16233B;text-align:center;margin:56px 0 28px;letter-spacing:-0.01em;">Momentos no Lar Santa Ana</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;">
+        <sc-for list="{{ events }}" as="ev" hint-placeholder-count="5">
+          <button onClick="{{ ev.onClick }}" style="position:relative;border:0;padding:0;cursor:pointer;border-radius:16px;overflow:hidden;aspect-ratio:1/1;box-shadow:0 16px 34px -26px rgba(22,35,59,.4);group:hover;">
+            <img src="{{ ev.img }}" alt="{{ ev.alt }}" style="width:100%;height:100%;object-fit:cover;object-position:{{ ev.pos }};display:block;transition:transform .4s ease;" onMouseOver="{{ imgZoom }}" onMouseOut="{{ imgUnzoom }}">
+            <span style="position:absolute;left:0;right:0;bottom:0;padding:24px 14px 12px;background:linear-gradient(180deg,transparent,rgba(22,35,59,.78));color:#fff;font:700 13px/1.2 'Mulish';text-align:left;display:block;">{{ ev.title }}</span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTATO ===================== -->
+  <section id="contato" style="padding:96px 28px;scroll-margin-top:84px;" class="lsa-section">
+    <div style="max-width:1240px;margin:0 auto;">
+      <div class="lsa-contact-grid" style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;align-items:start;">
+        <div>
+          <div style="display:inline-flex;align-items:center;gap:9px;font:700 13px/1 'Mulish';letter-spacing:.16em;text-transform:uppercase;color:#2563EB;margin-bottom:18px;"><span style="width:7px;height:7px;border-radius:50%;background:#85C441;"></span>Fale conosco</div>
+          <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(2.1rem,3.6vw,3rem);line-height:1.1;letter-spacing:-0.02em;color:#16233B;margin:0 0 16px;">Vamos Conversar!</h2>
+          <p style="font-size:1.12rem;line-height:1.6;color:#56616F;margin:0 0 28px;">Agende uma visita ou tire suas dúvidas. Nossa equipe responderá com carinho.</p>
+          <a href="https://wa.me/5511980817690?text=Ol%C3%A1!%20Gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Residencial." target="_blank" rel="noopener noreferrer" onClick="{{ waClick }}" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:340px;background:#25D366;color:#fff;font:800 17px/1 'Mulish';text-decoration:none;padding:18px 28px;border-radius:14px;box-shadow:0 14px 30px -12px rgba(37,211,102,.6);transition:transform .15s;margin-bottom:30px;" onMouseOver="{{ btnUp }}" onMouseOut="{{ btnDown }}">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm4.52 11.97c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+            Falar no WhatsApp
+          </a>
+          <div style="background:#fff;border:1px solid #ECE8DF;border-radius:20px;padding:28px;box-shadow:0 18px 40px -30px rgba(22,35,59,.3);display:flex;flex-direction:column;gap:22px;">
+            <div style="display:flex;gap:15px;align-items:flex-start;">
+              <div style="flex-shrink:0;width:40px;height:40px;border-radius:11px;background:#EDF7F2;display:flex;align-items:center;justify-content:center;color:#2E9B78;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div><div style="font:800 14px/1 'Mulish';color:#16233B;margin-bottom:7px;">Telefone</div><a href="tel:+551125372024" style="font:600 15px/1.4 'Mulish';color:#2563EB;text-decoration:none;">(11) 2537-2024</a><div style="font:500 12.5px/1.3 'Mulish';color:#9AA4B2;margin-top:4px;">Atendimento das 9h às 18h</div></div>
+            </div>
+            <div style="display:flex;gap:15px;align-items:flex-start;">
+              <div style="flex-shrink:0;width:40px;height:40px;border-radius:11px;background:#EDF7F2;display:flex;align-items:center;justify-content:center;color:#25A85A;"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2z"/></svg></div>
+              <div><div style="font:800 14px/1 'Mulish';color:#16233B;margin-bottom:7px;">WhatsApp</div><a href="https://wa.me/5511980817690?text=Ol%C3%A1!%20Vim%20do%20site%20Lar%20Santa%20Ana%20e%20preciso%20de%20informa%C3%A7%C3%B5es." onClick="{{ waClick }}" style="font:600 15px/1.3 'Mulish';color:#2563EB;text-decoration:none;">(11) 98081-7690</a><div style="font:500 12.5px/1.3 'Mulish';color:#9AA4B2;margin-top:5px;">Resposta rápida 24h</div></div>
+            </div>
+            <div style="display:flex;gap:15px;align-items:flex-start;">
+              <div style="flex-shrink:0;width:40px;height:40px;border-radius:11px;background:#EDF7F2;display:flex;align-items:center;justify-content:center;color:#2E9B78;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+              <div><div style="font:800 14px/1 'Mulish';color:#16233B;margin-bottom:7px;">Email</div><div style="display:flex;flex-direction:column;gap:5px;"><a href="mailto:dani.chimbata@outlook.com" style="font:600 15px/1.3 'Mulish';color:#2563EB;text-decoration:none;word-break:break-all;">dani.chimbata@outlook.com</a><a href="mailto:fabi.gomes.fisio@gmail.com" style="font:600 15px/1.3 'Mulish';color:#2563EB;text-decoration:none;word-break:break-all;">fabi.gomes.fisio@gmail.com</a></div><div style="font:500 12.5px/1.3 'Mulish';color:#9AA4B2;margin-top:5px;">Resposta em até 24h</div></div>
+            </div>
+            <div style="display:flex;gap:15px;align-items:flex-start;">
+              <div style="flex-shrink:0;width:40px;height:40px;border-radius:11px;background:#EDF7F2;display:flex;align-items:center;justify-content:center;color:#2E9B78;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div><div style="font:800 14px/1 'Mulish';color:#16233B;margin-bottom:7px;">Endereço</div><p style="font:500 14.5px/1.6 'Mulish';color:#56616F;margin:0;">R. Santa Gertrudes, 59<br>Vila Gomes Cardim, São Paulo – SP<br>CEP: 03408-020</p></div>
+            </div>
+            <div style="display:flex;gap:15px;align-items:flex-start;">
+              <div style="flex-shrink:0;width:40px;height:40px;border-radius:11px;background:#EDF7F2;display:flex;align-items:center;justify-content:center;color:#2E9B78;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+              <div><div style="font:800 14px/1 'Mulish';color:#16233B;margin-bottom:7px;">Horário de Visitas</div><p style="font:500 14.5px/1.5 'Mulish';color:#56616F;margin:0;">Visita Livre — Sem restrição de dia e horário</p></div>
+            </div>
+          </div>
+        </div>
+        <div style="position:sticky;top:104px;">
+          <div style="background:#fff;border:1px solid #ECE8DF;border-radius:22px;padding:22px;box-shadow:0 22px 50px -34px rgba(22,35,59,.36);">
+            <h3 style="font-family:'Mulish';font-weight:800;font-size:1.2rem;color:#16233B;margin:0 0 18px;padding:4px 6px;">Nossa Localização</h3>
+            <div style="border-radius:16px;overflow:hidden;border:1px solid #ECE8DF;height:460px;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.020635985289!2d-46.58127892407859!3d-23.536388061274624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5dd0f6c72a45%3A0x45b7a66b5b6b7b6b!2sR.%20Santa%20Gertrudes%2C%2059%20-%20Vila%20Gomes%20Cardim%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003408-020!5e0!3m2!1spt-BR!2sbr!4v1648000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;display:block;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização do Lar Santa Ana"></iframe>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=R.%20Santa%20Gertrudes%2C%2059%20-%20Vila%20Gomes%20Cardim%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003408-020%2C%20Brasil" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:9px;margin-top:16px;color:#2563EB;font:700 15px/1 'Mulish';text-decoration:none;border:1.5px solid #2563EB;border-radius:12px;padding:13px 22px;transition:background .2s;" onMouseOver="{{ mapsOver }}" onMouseOut="{{ mapsOut }}">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Abrir no Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- ===================== FOOTER ===================== -->
+  <footer style="background:#16233B;color:#C7D0DE;padding:64px 28px 32px;" class="lsa-section">
+    <div style="max-width:1240px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:40px;" class="lsa-essencia-grid">
+        <div>
+          <img src="assets/logo-lar-santa-ana.png" alt="Lar Santa Ana" style="height:64px;width:auto;display:block;margin-bottom:18px;filter:brightness(0) invert(1);opacity:.95;">
+          <p style="font-size:0.98rem;line-height:1.65;color:#9DA8B9;margin:0 0 20px;max-width:300px;">Mais de 15 anos dedicados ao cuidado de idosos com amor, respeito e profissionalismo no coração de Tatuapé.</p>
+          <div style="display:flex;gap:12px;">
+            <a href="https://www.instagram.com/lar_santa_ana/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .2s;" onMouseOver="{{ socOver }}" onMouseOut="{{ socOut }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
+            <a href="https://www.facebook.com/residencialsantaana/?locale=pt_BR" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .2s;" onMouseOver="{{ socOver }}" onMouseOut="{{ socOut }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://wa.me/5511980817690?text=Ol%C3%A1!%20Gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Residencial." target="_blank" rel="noopener noreferrer" onClick="{{ waClick }}" aria-label="WhatsApp" style="width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .2s;" onMouseOver="{{ socOver }}" onMouseOut="{{ socOut }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font:800 1rem/1 'Mulish';color:#fff;margin:0 0 18px;">Navegação</h4>
+          <div style="display:flex;flex-direction:column;gap:11px;">
+            <a href="#home" onClick="{{ nav }}" style="font:500 0.96rem/1 'Mulish';color:#9DA8B9;text-decoration:none;">Início</a>
+            <a href="#essencia" onClick="{{ nav }}" style="font:500 0.96rem/1 'Mulish';color:#9DA8B9;text-decoration:none;">Nossa Essência</a>
+            <a href="#cuidados" onClick="{{ nav }}" style="font:500 0.96rem/1 'Mulish';color:#9DA8B9;text-decoration:none;">Cuidados</a>
+            <a href="#momentos" onClick="{{ nav }}" style="font:500 0.96rem/1 'Mulish';color:#9DA8B9;text-decoration:none;">Eventos</a>
+            <a href="#contato" onClick="{{ nav }}" style="font:500 0.96rem/1 'Mulish';color:#9DA8B9;text-decoration:none;">Contato</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font:800 1rem/1 'Mulish';color:#fff;margin:0 0 18px;">Nossos Serviços</h4>
+          <div style="display:flex;flex-direction:column;gap:11px;">
+            <span style="font:500 0.96rem/1.3 'Mulish';color:#9DA8B9;">Cuidados Médicos</span>
+            <span style="font:500 0.96rem/1.3 'Mulish';color:#9DA8B9;">Nutrição Especializada</span>
+            <span style="font:500 0.96rem/1.3 'Mulish';color:#9DA8B9;">Atividades Físicas</span>
+            <span style="font:500 0.96rem/1.3 'Mulish';color:#9DA8B9;">Estimulação Cognitiva</span>
+            <span style="font:500 0.96rem/1.3 'Mulish';color:#9DA8B9;">Apoio Psicológico</span>
+            <span style="font:500 0.96rem/1.3 'Mulish';color:#9DA8B9;">Cuidado Espiritual</span>
+          </div>
+        </div>
+        <div>
+          <h4 style="font:800 1rem/1 'Mulish';color:#fff;margin:0 0 18px;">Contato</h4>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="tel:+551125372024" style="display:flex;gap:11px;align-items:center;font:500 0.96rem/1.3 'Mulish';color:#9DA8B9;text-decoration:none;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#9DDDC1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(11) 2537-2024</a>
+            <div style="display:flex;gap:11px;align-items:flex-start;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#9DDDC1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top:2px;flex-shrink:0;"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg><div style="display:flex;flex-direction:column;gap:3px;"><a href="mailto:dani.chimbata@outlook.com" style="font:500 0.92rem/1.3 'Mulish';color:#9DA8B9;text-decoration:none;word-break:break-all;">dani.chimbata@outlook.com</a><a href="mailto:fabi.gomes.fisio@gmail.com" style="font:500 0.92rem/1.3 'Mulish';color:#9DA8B9;text-decoration:none;word-break:break-all;">fabi.gomes.fisio@gmail.com</a></div></div>
+            <div style="display:flex;gap:11px;align-items:flex-start;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#9DDDC1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top:2px;flex-shrink:0;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><div style="font:500 0.92rem/1.5 'Mulish';color:#9DA8B9;">Rua Santa Gertrudes, 59<br>Tatuapé – São Paulo/SP<br>CEP: 03408-020</div></div>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,.1);margin-top:48px;padding-top:26px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;">
+        <p style="font:500 0.88rem/1 'Mulish';color:#7E8A9C;margin:0;">© 2025 Lar Santa Ana. Todos os direitos reservados.</p>
+        <p style="font:500 0.84rem/1.4 'Mulish';color:#5F6B7D;margin:0;">Residencial para Idosos · Tatuapé, Zona Leste — São Paulo</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== WHATSAPP FAB ===================== -->
+  <a href="https://wa.me/5511980817690?text=Ol%C3%A1!%20Gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Residencial." target="_blank" rel="noopener noreferrer" onClick="{{ waClick }}" aria-label="Falar no WhatsApp" style="position:fixed;right:22px;bottom:22px;z-index:80;width:62px;height:62px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 12px 28px -6px rgba(37,211,102,.55);animation:floatY 4s ease-in-out infinite;transition:transform .15s;" onMouseOver="{{ btnUp }}" onMouseOut="{{ btnDown }}">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.13c-1.52 0-3.01-.41-4.3-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.35c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.69 8.23 8.23 0 4.54-3.69 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+  </a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { menuOpen: false, slide: 0 };
+
+  icons = {
+    stethoscope: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2a.3.3 0 0 0-.2.3"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><path d="M11 3H9a1 1 0 0 0-1 1v6a3 3 0 0 0 6 0V4a1 1 0 0 0-1-1h-2"/><circle cx="20" cy="10" r="2"/></svg>',
+    brain: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.142 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.142 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg>',
+    food: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h0a2 2 0 0 0 2-2V2"/><path d="M5 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>',
+    heart: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+    dumbbell: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6.5 6.5 11 11"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg>',
+    cross: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2a2 2 0 0 0-2 2v5H4a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h5v5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-5h5a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-5V4a2 2 0 0 0-2-2h-2z"/></svg>',
+    shirt: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>',
+    gift: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>',
+    star: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+    heartBig: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>'
+  };
+
+  services = [
+    { group: "Médico & Terapia", title: "Cuidados Médicos", desc: "Acompanhamento médico com especialistas em geriatria.", icon: this.icons.stethoscope },
+    { group: "Médico & Terapia", title: "Fisioterapia, Enfermagem e Fonoterapia", desc: "Equipe especializada em cuidado integral de idosos.", icon: this.icons.brain },
+    { group: "Nutrição & Bem-estar", title: "Nutrição Especializada", desc: "Planos alimentares supervisionados por nutricionistas.", icon: this.icons.food },
+    { group: "Nutrição & Bem-estar", title: "Apoio Psicológico", desc: "Suporte emocional para bem-estar mental.", icon: this.icons.heart },
+    { group: "Lazer & Cultura", title: "Atividade Física", desc: "Exercícios adaptados promovendo mobilidade e força.", icon: this.icons.dumbbell },
+    { group: "Lazer & Cultura", title: "Estimulação Cognitiva", desc: "Atividades para manter funções cognitivas ativas.", icon: this.icons.brain },
+    { group: "Apoio Diário", title: "Cuidado Espiritual", desc: "Apoio espiritual respeitando crenças individuais.", icon: this.icons.cross },
+    { group: "Apoio Diário", title: "Serviços de Apoio", desc: "Lavanderia e cuidado com pertences pessoais.", icon: this.icons.shirt }
+  ];
+
+  routine = [
+    { time: "07:00", title: "Despertar e Cuidados Matinais", desc: "Acordar suave, higiene pessoal assistida e preparo para o café da manhã." },
+    { time: "08:30", title: "Café da Manhã Nutritivo", desc: "Refeição balanceada supervisionada por nutricionista, adaptada às necessidades individuais." },
+    { time: "10:00", title: "Atividades Físicas no Jardim", desc: "Exercícios adaptados ao ar livre: alongamentos, mobilidade e fisioterapia leve." },
+    { time: "12:00", title: "Almoço e Descanso", desc: "Refeição principal do dia seguida de um momento de relaxamento." },
+    { time: "15:00", title: "Lanche da Tarde", desc: "Lanche leve e hidratação para repor as energias antes das atividades da tarde." },
+    { time: "16:00", title: "Convívio & Estímulo Cognitivo", desc: "Atividades sociais com jogos de memória, leitura, música e interação em grupo." },
+    { time: "18:00", title: "Jantar", desc: "Refeição noturna em ambiente acolhedor, promovendo socialização." },
+    { time: "20:00", title: "Preparação para Descanso", desc: "Higiene noturna e preparo para uma noite tranquila." }
+  ];
+
+  eventsData = [
+    { img: "assets/momento-jardim.jpg", alt: "Residentes participando de atividades ao ar livre", title: "Atividades ao Ar Livre", desc: "Momentos de convivência e atividades recreativas em nosso espaço externo.", pos: "50% 50%", icon: this.icons.heartBig },
+    { img: "assets/momento-festa-junina.jpg", alt: "Residentes reunidos na Festa Junina", title: "Festa Junina", desc: "Celebração tradicional com comidas típicas, decoração festiva e apresentações.", pos: "50% 35%", icon: this.icons.star },
+    { img: "assets/momento-aniversario.jpg", alt: "Aniversário — moradora celebrando com bolo e decoração", title: "Aniversários", desc: "Comemorações mensais com bolo, música e muita alegria.", pos: "50% 30%", icon: this.icons.gift },
+    { img: "assets/momento-pascoa.jpg", alt: "Celebração de Páscoa com residentes no jardim", title: "Celebração de Páscoa", desc: "Reunião especial com almoço festivo e atividades temáticas.", pos: "50% 40%", icon: this.icons.heartBig },
+    { img: "assets/momento-natal.jpg", alt: "Atividade de Natal com residentes e equipe", title: "Ceia de Natal", desc: "Ceia natalina, troca de presentes e momentos emocionantes em família.", pos: "50% 45%", icon: this.icons.gift }
+  ];
+
+  smoothTo(id) {
+    const el = document.getElementById(id);
+    if (!el) { window.location.hash = id; return; }
+    const top = el.getBoundingClientRect().top + window.scrollY - 76;
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+
+  componentDidMount() {
+    this._spy = () => {
+      const ids = ["home","essencia","cuidados","rotina","momentos","contato"];
+      let cur = ids[0];
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 140) cur = id;
+      }
+      document.querySelectorAll("[data-nav]").forEach(a => {
+        const on = a.getAttribute("data-nav") === cur;
+        a.style.color = on ? "#2563EB" : "#16233B";
+        a.style.background = on ? "#EFF4FE" : "transparent";
+      });
+    };
+    window.addEventListener("scroll", this._spy, { passive: true });
+    this._spy();
+    this._key = (e) => {
+      if (e.key === "ArrowLeft") this.setState(s => ({ slide: (s.slide + this.eventsData.length - 1) % this.eventsData.length }));
+      else if (e.key === "ArrowRight") this.setState(s => ({ slide: (s.slide + 1) % this.eventsData.length }));
+    };
+    window.addEventListener("keydown", this._key);
+  }
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this._spy);
+    window.removeEventListener("keydown", this._key);
+  }
+
+  renderVals() {
+    const n = this.eventsData.length;
+    const cur = this.state.slide;
+    const events = this.eventsData.map((e, i) => ({
+      ...e,
+      onClick: (ev) => { ev.preventDefault(); this.setState({ slide: i }); this.smoothTo("momentos"); }
+    }));
+    const dotsHtml = this.eventsData.map((_, i) =>
+      `<span style="width:${i===cur?'22px':'8px'};height:8px;border-radius:99px;background:${i===cur?'#2563EB':'#C7D3CC'};display:inline-block;transition:all .25s;"></span>`
+    ).join("");
+
+    return {
+      services: this.services,
+      routine: this.routine,
+      events,
+      currentEvent: this.eventsData[cur],
+      currentEventCounter: `${String(cur+1).padStart(2,"0")} / ${String(n).padStart(2,"0")} · Eventos`,
+      dotsHtml,
+      mobileMenuStyle: this.state.menuOpen
+        ? "display:flex;flex-direction:column;padding:8px 28px 20px;background:#fff;border-top:1px solid #ECE8DF;"
+        : "display:none;",
+      nav: (e) => {
+        e.preventDefault();
+        const id = e.currentTarget.getAttribute("href").slice(1);
+        this.setState({ menuOpen: false });
+        this.smoothTo(id);
+      },
+      navHome: (e) => { e.preventDefault(); this.setState({ menuOpen: false }); this.smoothTo("home"); },
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      prevSlide: () => this.setState(s => ({ slide: (s.slide + n - 1) % n })),
+      nextSlide: () => this.setState(s => ({ slide: (s.slide + 1) % n })),
+      btnUp: (e) => { e.currentTarget.style.transform = "translateY(-2px)"; },
+      btnDown: (e) => { e.currentTarget.style.transform = "translateY(0)"; },
+      outlineOver: (e) => { e.currentTarget.style.borderColor = "#2563EB"; e.currentTarget.style.transform = "translateY(-2px)"; },
+      outlineOut: (e) => { e.currentTarget.style.borderColor = "#DFE9E4"; e.currentTarget.style.transform = "translateY(0)"; },
+      ctrlOver: (e) => { e.currentTarget.style.background = "#F2F7F4"; },
+      ctrlOut: (e) => { e.currentTarget.style.background = "#fff"; },
+      mapsOver: (e) => { e.currentTarget.style.background = "#EFF4FE"; },
+      mapsOut: (e) => { e.currentTarget.style.background = "transparent"; },
+      socOver: (e) => { e.currentTarget.style.background = "rgba(157,221,193,.25)"; },
+      socOut: (e) => { e.currentTarget.style.background = "rgba(255,255,255,.08)"; },
+      imgZoom: (e) => { e.currentTarget.style.transform = "scale(1.06)"; },
+      imgUnzoom: (e) => { e.currentTarget.style.transform = "scale(1)"; },
+      waClick: (e) => {
+        e.preventDefault();
+        const url = e.currentTarget.getAttribute('href') || 'https://wa.me/5511980817690';
+        window.open(url, '_blank', 'noopener,noreferrer');
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
